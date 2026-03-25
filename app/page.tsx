@@ -10,7 +10,7 @@ export default function Home() {
       {/* HERO */}
       <section className="text-center py-32 px-6">
         <h1 className="text-5xl md:text-6xl font-bold leading-tight">
-          Designing Property.<br />
+          Designing Expertly.<br />
           Building Systems.<br />
           Thinking Differently.
         </h1>
