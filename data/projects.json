@@ -8,5 +8,19 @@
       "/projects/heathrow-t5-refit/plan.jpg",
       "/projects/heathrow-t5-refit/detail.jpg"
     ]
+  },
+  {
+    "title": "George",
+    "slug": "george",
+    "description": "Test",
+    "location": "Test",
+    "tags": [
+      "WHSmith"
+    ],
+    "images": [
+      "/projects/george/1.jpg",
+      "/projects/george/2.jpg",
+      "/projects/george/3.jpg"
+    ]
   }
 ]
