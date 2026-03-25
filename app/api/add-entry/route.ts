@@ -22,11 +22,54 @@ export async function POST(req: Request) {
       ],
     };
 
-    console.log("NEW ENTRY:", entry);
+    const repo = process.env.GITHUB_REPO;
+    const token = process.env.GITHUB_TOKEN;
 
-    return NextResponse.json({ success: true, entry });
+    const filePath =
+      type === "project"
+        ? "data/projects.json"
+        : "data/systems.json";
+
+    // 1. GET CURRENT FILE
+    const getRes = await fetch(
+      `https://api.github.com/repos/${repo}/contents/${filePath}`,
+      {
+        headers: {
+          Authorization: `token ${token}`,
+        },
+      }
+    );
+
+    const fileData = await getRes.json();
+
+    const content = JSON.parse(
+      Buffer.from(fileData.content, "base64").toString()
+    );
+
+    // 2. ADD NEW ENTRY
+    content.push(entry);
+
+    // 3. UPDATE FILE
+    await fetch(
+      `https://api.github.com/repos/${repo}/contents/${filePath}`,
+      {
+        method: "PUT",
+        headers: {
+          Authorization: `token ${token}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          message: `Add ${type}: ${title}`,
+          content: Buffer.from(JSON.stringify(content, null, 2)).toString("base64"),
+          sha: fileData.sha,
+        }),
+      }
+    );
+
+    return NextResponse.json({ success: true });
 
   } catch (err) {
+    console.error(err);
     return NextResponse.json({ error: "Failed" }, { status: 500 });
   }
 }
