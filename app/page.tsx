@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import ProjectCard from "./components/ProjectCard";
 import projects from "../data/projects.json";
 
 export default function Home() {
@@ -9,10 +9,18 @@ export default function Home() {
 
       {/* HERO */}
       <section className="text-center py-32 px-6">
-        <h1 className="text-5xl md:text-6xl font-bold leading-tight">
-          Designing Expertly.<br />
-          Building Systems.<br />
-          Thinking Differently.
+        <h1 className="text-5xl md:text-6xl font-bold leading-tight tracking-tight">
+          <span className="bg-gradient-to-r from-white to-zinc-500 bg-clip-text text-transparent">
+            Designing Property.
+          </span>
+          <br />
+          <span className="bg-gradient-to-r from-white to-zinc-500 bg-clip-text text-transparent">
+            Building Systems.
+          </span>
+          <br />
+          <span className="bg-gradient-to-r from-white to-zinc-500 bg-clip-text text-transparent">
+            Thinking Differently.
+          </span>
         </h1>
 
         <p className="mt-6 text-zinc-400 max-w-2xl mx-auto">
@@ -20,8 +28,8 @@ export default function Home() {
         </p>
       </section>
 
-      {/* PROJECTS SECTION */}
-      <section className="px-6 pb-20 max-w-6xl mx-auto">
+      {/* PROJECTS */}
+      <section className="px-6 pb-20 max-w-6xl mx-auto animate-fadeIn">
 
         <h2 className="text-3xl font-semibold mb-4">
           My Projects for BrookerFlynn Architects
@@ -33,35 +41,9 @@ export default function Home() {
 
         {/* PROJECT GRID */}
         <div className="grid md:grid-cols-2 gap-8">
-
           {projects.map((project: any) => (
-            <Link key={project.slug} href={`/projects/${project.slug}`}>
-              
-              <div className="bg-zinc-900 rounded-2xl overflow-hidden hover:scale-[1.02] transition duration-300 cursor-pointer">
-
-                {/* IMAGE */}
-                <img
-                  src={project.images?.[0]}
-                  alt={project.title}
-                  className="w-full h-64 object-cover"
-                />
-
-                {/* CONTENT */}
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">
-                    {project.title}
-                  </h3>
-
-                  <p className="text-zinc-400 text-sm">
-                    {project.location}
-                  </p>
-                </div>
-
-              </div>
-
-            </Link>
+            <ProjectCard key={project.slug} project={project} />
           ))}
-
         </div>
 
       </section>
