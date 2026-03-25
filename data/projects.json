@@ -36,19 +36,5 @@
       "/projects/gpb/2.jpg",
       "/projects/gpb/3.jpg"
     ]
-  },
-  {
-    "title": "GB NEW",
-    "slug": "gb-new",
-    "description": "london",
-    "location": "london",
-    "tags": [
-      "wow"
-    ],
-    "images": [
-      "https://res.cloudinary.com/dgeaojy0i/image/upload/v1774479908/projects/gb-new/j6fukhnaruxfl8d3sy63.jpg",
-      "https://res.cloudinary.com/dgeaojy0i/image/upload/v1774479909/projects/gb-new/l4mqmhcynrxzkpv9rogs.jpg",
-      "https://res.cloudinary.com/dgeaojy0i/image/upload/v1774479910/projects/gb-new/qq5smuuzp97ulhspu3fj.jpg"
-    ]
   }
 ]
