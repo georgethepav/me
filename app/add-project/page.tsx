@@ -1,104 +1,78 @@
-import { NextResponse } from "next/server";
-import fs from "fs";
-import path from "path";
-import formidable from "formidable";
+"use client";
 
-// IMPORTANT for file uploads
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
+import { useState } from "react";
 
-export async function POST(req: any) {
-  const form = formidable({ multiples: true });
-
-  return new Promise((resolve, reject) => {
-    form.parse(req, (err: any, fields: any, files: any) => {
-      if (err) {
-        console.error(err);
-        return reject(err);
-      }
-
-      try {
-        // 🔹 Basic data
-        const title = fields.title?.[0] || "Untitled Project";
-        const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
-
-        // 🔹 Create project folder
-        const folderPath = path.join(
-          process.cwd(),
-          "public",
-          "projects",
-          slug
-        );
-
-        if (!fs.existsSync(folderPath)) {
-          fs.mkdirSync(folderPath, { recursive: true });
-        }
-
-        // 🔹 Save images
-        const imageNames = ["hero", "plan", "detail"];
-
-        if (files.images) {
-          const uploadedFiles = Array.isArray(files.images)
-            ? files.images
-            : [files.images];
-
-          uploadedFiles.forEach((file: any, i: number) => {
-            if (i < imageNames.length) {
-              const data = fs.readFileSync(file.filepath);
-              const filePath = path.join(
-                folderPath,
-                `${imageNames[i]}.jpg`
-              );
-              fs.writeFileSync(filePath, data);
-            }
-          });
-        }
-
-        // 🔹 Build project object
-        const newProject = {
-          title,
-          slug,
-          client: fields.client?.[0] || "",
-          location: fields.location?.[0] || "",
-          description: fields.description?.[0] || "",
-          challenge: fields.challenge?.[0] || "",
-          solution: fields.solution?.[0] || "",
-          outcome: fields.outcome?.[0] || "",
-          systems: fields.systems?.[0] || "",
-          images: [
-            `/projects/${slug}/hero.jpg`,
-            `/projects/${slug}/plan.jpg`,
-            `/projects/${slug}/detail.jpg`,
-          ],
-        };
-
-        // 🔹 Save to JSON
-        const jsonPath = path.join(process.cwd(), "data", "projects.json");
-
-        let existing = [];
-
-        if (fs.existsSync(jsonPath)) {
-          existing = JSON.parse(fs.readFileSync(jsonPath, "utf-8"));
-        }
-
-        existing.push(newProject);
-
-        fs.writeFileSync(jsonPath, JSON.stringify(existing, null, 2));
-
-        // 🔹 Success response
-        resolve(
-          NextResponse.json({
-            success: true,
-            message: "Project created successfully",
-          })
-        );
-      } catch (error) {
-        console.error(error);
-        reject(error);
-      }
-    });
+export default function AddProjectPage() {
+  const [form, setForm] = useState({
+    title: "",
+    client: "",
+    location: "",
+    description: "",
+    challenge: "",
+    solution: "",
+    outcome: "",
+    systems: "",
   });
+
+  const [files, setFiles] = useState<FileList | null>(null);
+
+  const handleChange = (e: any) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async () => {
+    const formData = new FormData();
+
+    Object.entries(form).forEach(([key, value]) => {
+      formData.append(key, value);
+    });
+
+    if (files) {
+      for (let i = 0; i < files.length; i++) {
+        formData.append("images", files[i]);
+      }
+    }
+
+    await fetch("/api/add-project", {
+      method: "POST",
+      body: formData,
+    });
+
+    alert("Project submitted!");
+  };
+
+  return (
+    <div className="min-h-screen bg-black text-white p-10">
+      <div className="max-w-xl mx-auto">
+        <h1 className="text-3xl mb-6">Add Project</h1>
+
+        <input name="title" onChange={handleChange} placeholder="Title" className="w-full mb-3 p-2 bg-zinc-800" />
+        <input name="client" onChange={handleChange} placeholder="Client" className="w-full mb-3 p-2 bg-zinc-800" />
+        <input name="location" onChange={handleChange} placeholder="Location" className="w-full mb-3 p-2 bg-zinc-800" />
+        <input name="description" onChange={handleChange} placeholder="Description" className="w-full mb-3 p-2 bg-zinc-800" />
+
+        <textarea name="challenge" onChange={handleChange} placeholder="Challenge" className="w-full mb-3 p-2 bg-zinc-800" />
+        <textarea name="solution" onChange={handleChange} placeholder="Solution" className="w-full mb-3 p-2 bg-zinc-800" />
+        <textarea name="outcome" onChange={handleChange} placeholder="Outcome" className="w-full mb-3 p-2 bg-zinc-800" />
+        <textarea name="systems" onChange={handleChange} placeholder="Systems" className="w-full mb-3 p-2 bg-zinc-800" />
+
+        <input
+          type="file"
+          multiple
+          onChange={(e) => setFiles(e.target.files)}
+          className="mb-4"
+        />
+
+        <button
+          onClick={handleSubmit}
+          className="bg-white text-black px-4 py-2"
+        >
+          Submit
+        </button>
+      </div>
+    </div>
+  );
 }
