@@ -1,43 +1,15 @@
 import { NextResponse } from "next/server";
-import fs from "fs";
-import path from "path";
 
 export async function POST(req: Request) {
   try {
     const formData = await req.formData();
 
     const title = formData.get("title") as string;
-    const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 
-    // Create folder
-    const folderPath = path.join(
-      process.cwd(),
-      "public",
-      "projects",
-      slug
-    );
+    const slug = title
+      ?.toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-");
 
-    if (!fs.existsSync(folderPath)) {
-      fs.mkdirSync(folderPath, { recursive: true });
-    }
-
-    // Get images
-    const images = formData.getAll("images") as File[];
-
-    const imageNames = ["hero", "plan", "detail"];
-
-    for (let i = 0; i < images.length && i < imageNames.length; i++) {
-      const file = images[i];
-      const bytes = await file.arrayBuffer();
-      const buffer = Buffer.from(bytes);
-
-      fs.writeFileSync(
-        path.join(folderPath, `${imageNames[i]}.jpg`),
-        buffer
-      );
-    }
-
-    // Build project
     const newProject = {
       title,
       slug,
@@ -55,23 +27,21 @@ export async function POST(req: Request) {
       ],
     };
 
-    // Save JSON
-    const jsonPath = path.join(process.cwd(), "data", "projects.json");
+    // 🔴 IMPORTANT NOTE:
+    // We are NOT saving files or JSON here because Vercel is read-only
 
-    let existing = [];
+    console.log("New Project Submitted:", newProject);
 
-    if (fs.existsSync(jsonPath)) {
-      existing = JSON.parse(fs.readFileSync(jsonPath, "utf-8"));
-    }
-
-    existing.push(newProject);
-
-    fs.writeFileSync(jsonPath, JSON.stringify(existing, null, 2));
-
-    return NextResponse.json({ success: true });
+    return NextResponse.json({
+      success: true,
+      project: newProject,
+    });
 
   } catch (error) {
     console.error(error);
-    return NextResponse.json({ error: "Failed" }, { status: 500 });
+    return NextResponse.json(
+      { error: "Something went wrong" },
+      { status: 500 }
+    );
   }
 }
