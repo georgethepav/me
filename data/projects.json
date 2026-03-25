@@ -22,5 +22,19 @@
       "/projects/george/2.jpg",
       "/projects/george/3.jpg"
     ]
+  },
+  {
+    "title": "GPB",
+    "slug": "gpb",
+    "description": "Good",
+    "location": "London",
+    "tags": [
+      "Revit"
+    ],
+    "images": [
+      "/projects/gpb/1.jpg",
+      "/projects/gpb/2.jpg",
+      "/projects/gpb/3.jpg"
+    ]
   }
 ]
