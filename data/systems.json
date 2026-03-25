@@ -3,7 +3,11 @@
     "title": "Planning Constraint Calculator",
     "slug": "planning-calculator",
     "description": "Automated planning constraints analysis tool for UK residential projects.",
-    "tags": ["Planning", "Automation", "Web Tool"],
+    "tags": [
+      "Planning",
+      "Automation",
+      "Web Tool"
+    ],
     "images": [
       "/systems/planning/1.jpg",
       "/systems/planning/2.jpg",
@@ -14,11 +18,29 @@
     "title": "Revit Material Path Fixer",
     "slug": "revit-path-fixer",
     "description": "Dynamo script to remap cloud-based material paths automatically.",
-    "tags": ["Revit", "Dynamo", "Automation"],
+    "tags": [
+      "Revit",
+      "Dynamo",
+      "Automation"
+    ],
     "images": [
       "/systems/revit/1.jpg",
       "/systems/revit/2.jpg",
       "/systems/revit/3.jpg"
+    ]
+  },
+  {
+    "title": "GPB2",
+    "slug": "gpb2",
+    "description": "Good2",
+    "location": "London2",
+    "tags": [
+      "Revit2"
+    ],
+    "images": [
+      "/systems/gpb2/1.jpg",
+      "/systems/gpb2/2.jpg",
+      "/systems/gpb2/3.jpg"
     ]
   }
 ]
