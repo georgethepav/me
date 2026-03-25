@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Heathrow Terminal 5 Refit – WHSmith",
+    "slug": "heathrow-t5-whsmith",
+    "description": "Retail refit within a live airport environment.",
+    "challenge": "Deliver within a live airport environment with strict constraints.",
+    "solution": "Coordinated design and phased delivery strategy.",
+    "outcome": "Successfully delivered within programme in a constrained environment.",
+    "systems": "Planning workflows + coordination systems",
+    "images": [
+      "/projects/heathrow-t5-whsmith/hero.jpg",
+      "/projects/heathrow-t5-whsmith/plan.jpg",
+      "/projects/heathrow-t5-whsmith/detail.jpg"
+    ]
+  },
+  {
+    "title": "Heathrow Terminal 3 Refit for WHSmith",
+    "client": "WHSmith",
+    "location": "London Heathrow",
+    "description": "Amalgamation of the existing WHSmith Unit and Boots unit in the T3 IDL",
+    "challenge": "New Concept roll out, and multiple site constraints",
+    "solution": "-",
+    "outcome": "-",
+    "systems": "-",
+    "slug": "heathrow-terminal-3-refit-for-whsmith",
+    "images": [
+      "/projects/heathrow-terminal-3-refit-for-whsmith/hero.jpg",
+      "/projects/heathrow-terminal-3-refit-for-whsmith/plan.jpg",
+      "/projects/heathrow-terminal-3-refit-for-whsmith/detail.jpg"
+    ]
+  }
+]
