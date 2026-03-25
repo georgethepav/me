@@ -2,6 +2,9 @@
 
 import { useState } from "react";
 
+import projects from "../../data/projects.json";
+import systems from "../../data/systems.json";
+
 export default function AdminPage() {
   const [type, setType] = useState("project");
 
@@ -41,7 +44,21 @@ export default function AdminPage() {
       body: formData,
     });
 
-    alert("Submitted 🚀");
+    alert("Added 🚀");
+    location.reload();
+  };
+
+  const handleDelete = async (slug: string, type: string) => {
+    await fetch("/api/delete-entry", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ slug, type }),
+    });
+
+    alert("Deleted ❌");
+    location.reload();
   };
 
   return (
@@ -61,11 +78,34 @@ export default function AdminPage() {
           <option value="system">Digital System</option>
         </select>
 
-        {/* INPUTS */}
-        <input name="title" onChange={handleChange} placeholder="Title" className="w-full mb-3 p-2 bg-zinc-800" />
-        <input name="location" onChange={handleChange} placeholder="Location" className="w-full mb-3 p-2 bg-zinc-800" />
-        <input name="description" onChange={handleChange} placeholder="Description" className="w-full mb-3 p-2 bg-zinc-800" />
-        <input name="tags" onChange={handleChange} placeholder="Tags (comma separated)" className="w-full mb-3 p-2 bg-zinc-800" />
+        {/* FORM */}
+        <input
+          name="title"
+          onChange={handleChange}
+          placeholder="Title"
+          className="w-full mb-3 p-2 bg-zinc-800"
+        />
+
+        <input
+          name="location"
+          onChange={handleChange}
+          placeholder="Location (projects only)"
+          className="w-full mb-3 p-2 bg-zinc-800"
+        />
+
+        <textarea
+          name="description"
+          onChange={handleChange}
+          placeholder="Description"
+          className="w-full mb-3 p-2 bg-zinc-800"
+        />
+
+        <input
+          name="tags"
+          onChange={handleChange}
+          placeholder="Tags (comma separated)"
+          className="w-full mb-3 p-2 bg-zinc-800"
+        />
 
         {/* FILE UPLOAD */}
         <input
@@ -77,10 +117,63 @@ export default function AdminPage() {
 
         <button
           onClick={handleSubmit}
-          className="bg-white text-black px-4 py-2"
+          className="bg-white text-black px-4 py-2 w-full mb-10"
         >
-          Submit
+          Add Entry
         </button>
+
+        {/* LIST EXISTING */}
+        <h2 className="text-xl mb-4">Existing Entries</h2>
+
+        <div className="space-y-4">
+
+          {/* PROJECTS */}
+          <div>
+            <h3 className="text-sm text-zinc-500 mb-2">Projects</h3>
+            {projects.map((item: any) => (
+              <div
+                key={item.slug}
+                className="flex justify-between items-center bg-zinc-900 p-3 rounded mb-2"
+              >
+                <div>
+                  <div className="font-semibold">{item.title}</div>
+                  <div className="text-xs text-zinc-500">{item.slug}</div>
+                </div>
+
+                <button
+                  onClick={() => handleDelete(item.slug, "project")}
+                  className="text-red-400 hover:text-red-200"
+                >
+                  Delete
+                </button>
+              </div>
+            ))}
+          </div>
+
+          {/* SYSTEMS */}
+          <div>
+            <h3 className="text-sm text-zinc-500 mt-6 mb-2">Digital Systems</h3>
+            {systems.map((item: any) => (
+              <div
+                key={item.slug}
+                className="flex justify-between items-center bg-zinc-900 p-3 rounded mb-2"
+              >
+                <div>
+                  <div className="font-semibold">{item.title}</div>
+                  <div className="text-xs text-zinc-500">{item.slug}</div>
+                </div>
+
+                <button
+                  onClick={() => handleDelete(item.slug, "system")}
+                  className="text-red-400 hover:text-red-200"
+                >
+                  Delete
+                </button>
+              </div>
+            ))}
+          </div>
+
+        </div>
 
       </div>
 
