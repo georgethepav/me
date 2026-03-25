@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 "use client";
 
 import Navbar from "./components/Navbar";
@@ -42,7 +44,7 @@ export default function Home() {
         </h2>
 
         <p className="text-zinc-400 max-w-3xl mb-12">
-          Architectural and design professional with over 20 years’ experience in the construction industry, including delivering complex retail projects across the UK and Europe. Specialising in refits, refurbishments and full fit-outs for high-profile environments including airports and major retail destinations.
+          Architectural and design professional with over 18 years’ experience in construction, delivering complex retail projects across the UK and Europe. Specialising in refits, refurbishments and full fit-outs for high-profile environments including airports and major retail destinations.
         </p>
 
         <div className="grid md:grid-cols-2 gap-8">
