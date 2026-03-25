@@ -15,7 +15,7 @@ export default function Home() {
       <section className="text-center py-40 px-6">
         <h1 className="text-5xl md:text-6xl font-bold leading-tight tracking-tight">
           <span className="bg-gradient-to-r from-white to-zinc-500 bg-clip-text text-transparent">
-            Designing Property.
+            Designing Expertly.
           </span>
           <br />
           <span className="bg-gradient-to-r from-white to-zinc-500 bg-clip-text text-transparent">
@@ -28,7 +28,7 @@ export default function Home() {
         </h1>
 
         <p className="mt-6 text-zinc-400 max-w-2xl mx-auto">
-          Architectural technologist combining design, development thinking and intelligent workflows to deliver better, faster outcomes.
+          Architectural Technologist combining design, development thinking and intelligent workflows to deliver better, faster outcomes.
         </p>
       </section>
 
