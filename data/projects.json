@@ -10,20 +10,6 @@
     ]
   },
   {
-    "title": "George",
-    "slug": "george",
-    "description": "Test",
-    "location": "Test",
-    "tags": [
-      "WHSmith"
-    ],
-    "images": [
-      "/projects/george/1.jpg",
-      "/projects/george/2.jpg",
-      "/projects/george/3.jpg"
-    ]
-  },
-  {
     "title": "GPB",
     "slug": "gpb",
     "description": "Good",
