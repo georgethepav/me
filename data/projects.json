@@ -1,15 +1,5 @@
 [
   {
-    "title": "Heathrow Terminal 5 Refit – WHSmith",
-    "slug": "heathrow-t5-refit",
-    "location": "London Heathrow Airport",
-    "images": [
-      "/projects/heathrow-t5-refit/hero.jpg",
-      "/projects/heathrow-t5-refit/plan.jpg",
-      "/projects/heathrow-t5-refit/detail.jpg"
-    ]
-  },
-  {
     "title": "GPB",
     "slug": "gpb",
     "description": "Good",
