@@ -1,20 +1,5 @@
 [
   {
-    "title": "Revit Material Path Fixer",
-    "slug": "revit-path-fixer",
-    "description": "Dynamo script to remap cloud-based material paths automatically.",
-    "tags": [
-      "Revit",
-      "Dynamo",
-      "Automation"
-    ],
-    "images": [
-      "/systems/revit/1.jpg",
-      "/systems/revit/2.jpg",
-      "/systems/revit/3.jpg"
-    ]
-  },
-  {
     "title": "GPB2",
     "slug": "gpb2",
     "description": "Good2",
