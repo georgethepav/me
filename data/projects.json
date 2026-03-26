@@ -12,5 +12,17 @@
       "/projects/gpb/2.jpg",
       "/projects/gpb/3.jpg"
     ]
+  },
+  {
+    "title": "Test",
+    "slug": "test",
+    "description": "Test",
+    "location": "Test",
+    "tags": [
+      ""
+    ],
+    "images": [
+      "https://res.cloudinary.com/dgeaojy0i/image/upload/v1774536342/projects/test/uvv8yntu2unbguwp1nyf.jpg"
+    ]
   }
 ]
