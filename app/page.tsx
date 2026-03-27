@@ -32,7 +32,7 @@ export default function Home() {
   {/* CONTENT */}
   <div className="relative z-10 max-w-4xl px-6">
 
-    <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6 bg-gradient-to-b from-white via-zinc-300 to-zinc-500 bg-clip-text text-transparent drop-shadow-[0_1px_1px_rgba(255,255,255,0.05)]">
+    <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6 bg-gradient-to-r from-zinc-300 via-zinc-100 to-zinc-600 bg-clip-text text-transparent drop-shadow-[0_1px_1px_rgba(255,255,255,0.05)]">
   Designing Expertly.
   <br />
   Building Systems.
