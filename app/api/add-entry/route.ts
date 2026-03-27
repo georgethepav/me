@@ -15,7 +15,10 @@ export async function POST(req: Request) {
     const type = formData.get("type");
     const title = formData.get("title") as string;
 
-    const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+    const slug = title
+  .toLowerCase()
+  .replace(/[^a-z0-9]+/g, "-")
+  .replace(/^-+|-+$/g, "");
 
     const files = formData.getAll("images") as File[];
 
