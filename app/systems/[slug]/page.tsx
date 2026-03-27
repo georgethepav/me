@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import systems from "../../../data/systems.json";
 
 export default function SystemPage({ params }: any) {
