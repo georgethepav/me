@@ -14,10 +14,11 @@ export default function SystemPage({ params }: any) {
   const system = systems.find((s: any) => s.slug === slug);
 
   if (!system) {
-    return (
-      <div className="text-white p-10">
-        Not found: {slug}
-      </div>
+  return (
+    <div className="text-white p-10">
+      <div>Slug from URL: {slug}</div>
+      <pre>{JSON.stringify(systems, null, 2)}</pre>
+    </div>
     );
   }
 
