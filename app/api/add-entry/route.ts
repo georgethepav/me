@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { v2 as cloudinary } from "cloudinary";
+import { Buffer } from "buffer";
 
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
@@ -20,7 +21,7 @@ export async function POST(req: Request) {
 
     const imageUrls: string[] = [];
 
-    // 📸 UPLOAD TO CLOUDINARY
+    // 📸 Upload images
     for (const file of files) {
       const bytes = await file.arrayBuffer();
       const buffer = Buffer.from(bytes);
@@ -42,6 +43,9 @@ export async function POST(req: Request) {
       imageUrls.push(upload.secure_url);
     }
 
+    // 👇 HANDLE CONTENT
+    const contentRaw = formData.get("content") as string;
+
     const entry = {
       title,
       slug,
@@ -49,9 +53,15 @@ export async function POST(req: Request) {
       location: formData.get("location"),
       tags: (formData.get("tags") as string)?.split(","),
       images: imageUrls,
+
+      content: contentRaw
+        ? contentRaw
+            .split("\n")
+            .map((p) => p.trim())
+            .filter((p) => p !== "")
+        : [],
     };
 
-    // --- GITHUB UPDATE ---
     const repo = process.env.GITHUB_REPO;
     const token = process.env.GITHUB_TOKEN;
 
@@ -60,6 +70,7 @@ export async function POST(req: Request) {
         ? "data/projects.json"
         : "data/systems.json";
 
+    // GET current file
     const getRes = await fetch(
       `https://api.github.com/repos/${repo}/contents/${filePath}`,
       {
@@ -77,6 +88,7 @@ export async function POST(req: Request) {
 
     content.push(entry);
 
+    // UPDATE file
     await fetch(
       `https://api.github.com/repos/${repo}/contents/${filePath}`,
       {
@@ -87,7 +99,9 @@ export async function POST(req: Request) {
         },
         body: JSON.stringify({
           message: `Add ${type}: ${title}`,
-          content: Buffer.from(JSON.stringify(content, null, 2)).toString("base64"),
+          content: Buffer.from(
+            JSON.stringify(content, null, 2)
+          ).toString("base64"),
           sha: fileData.sha,
         }),
       }
