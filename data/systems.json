@@ -12,5 +12,24 @@
       "/systems/gpb2/2.jpg",
       "/systems/gpb2/3.jpg"
     ]
+  },
+  {
+    "title": "Automating the Drawing Issue",
+    "slug": "automating-the-drawing-issue",
+    "description": "How I built an end-to-end issue workflow in Revit using Dynamo, Python and a\r\nbrowser-based QC checklist — and why it matters.",
+    "location": "Multiple Locations",
+    "tags": [
+      "Revit",
+      "Dynamo",
+      "Python",
+      "openpyxl",
+      "jsPDF",
+      "SharePoint",
+      "HTML"
+    ],
+    "images": [
+      "https://res.cloudinary.com/dgeaojy0i/image/upload/v1774620671/systems/automating-the-drawing-issue/pm7xllvt3fbfkbu7fv28.pdf",
+      "https://res.cloudinary.com/dgeaojy0i/image/upload/v1774620673/systems/automating-the-drawing-issue/eon6ij6qxhfaepr3chjx.png"
+    ]
   }
 ]
