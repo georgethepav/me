@@ -3,13 +3,12 @@ export const dynamic = "force-dynamic";
 import fs from "fs";
 import path from "path";
 
-export default function SystemPage({ params }: any) {
-  const filePath = path.join(process.cwd(), "data", "systems.json");
+export default function SystemPage({ params }: { params: { slug: string } }) {
+  const slug = params.slug;
 
+  const filePath = path.join(process.cwd(), "data", "systems.json");
   const fileData = fs.readFileSync(filePath, "utf-8");
   const systems = JSON.parse(fileData);
-
-  const slug = params.slug;
 
   const system = systems.find((s: any) => s.slug === slug);
 
