@@ -87,28 +87,52 @@ export default function Home() {
 
         <div className="grid md:grid-cols-3 gap-6">
 
-          <div className="bg-zinc-900 rounded-xl p-6 hover:scale-[1.03] transition">
-            <h3 className="text-lg font-semibold mb-2">UrbanBrief</h3>
-            <p className="text-sm text-zinc-400">
-              Data-driven tools to support smarter property decisions.
-            </p>
-          </div>
+         <div className="grid md:grid-cols-3 gap-6">
 
-          <div className="bg-zinc-900 rounded-xl p-6 hover:scale-[1.03] transition">
-            <h3 className="text-lg font-semibold mb-2">GrivoBlinx</h3>
-            <p className="text-sm text-zinc-400">
-              Automation-led workflows and systems for scalable development.
-            </p>
-          </div>
+  {/* URBANBRIEF */}
+  <div className="bg-zinc-900 rounded-xl p-6 hover:scale-[1.03] transition flex flex-col items-center text-center">
 
-          <div className="bg-zinc-900 rounded-xl p-6 hover:scale-[1.03] transition">
-            <h3 className="text-lg font-semibold mb-2">More Coming</h3>
-            <p className="text-sm text-zinc-400">
-              New tools and ventures currently in development.
-            </p>
-          </div>
+    <img
+      src="/logos/urbanbrief.png"
+      alt="UrbanBrief"
+      className="h-12 mb-4 object-contain"
+    />
 
-        </div>
+    <p className="text-sm text-zinc-400">
+      Data-driven tools to support smarter property decisions.
+    </p>
+
+  </div>
+
+  {/* GRIVOBLINX */}
+  <div className="bg-zinc-900 rounded-xl p-6 hover:scale-[1.03] transition flex flex-col items-center text-center">
+
+    <img
+      src="/logos/grivoblinx.png"
+      alt="GrivoBlinx"
+      className="h-12 mb-4 object-contain"
+    />
+
+    <p className="text-sm text-zinc-400">
+      Automation-led workflows and systems for scalable development.
+    </p>
+
+  </div>
+
+  {/* PLACEHOLDER */}
+  <div className="bg-zinc-900 rounded-xl p-6 hover:scale-[1.03] transition flex flex-col items-center text-center">
+
+    <div className="h-12 w-24 mb-4 bg-zinc-800 rounded flex items-center justify-center text-xs text-zinc-500">
+      Coming Soon
+    </div>
+
+    <p className="text-sm text-zinc-400">
+      New tools and ventures currently in development.
+    </p>
+
+  </div>
+
+</div>
 
       </section>
 
