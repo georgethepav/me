@@ -1,51 +1,99 @@
-"use client";
+export const dynamic = "force-dynamic";
 
-import { useParams } from "next/navigation";
-import projects from "../../../data/projects.json";
+import fs from "fs";
+import path from "path";
 
-export default function ProjectPage() {
-  const params = useParams();
-  const slug = params.slug as string;
+export default async function ProjectPage({ params }: any) {
+  const { slug } = await params;
 
-  const project = (projects as any[]).find(p => p.slug === slug);
+  const filePath = path.join(process.cwd(), "data", "projects.json");
+  const fileData = fs.readFileSync(filePath, "utf-8");
+  const projects = JSON.parse(fileData);
+
+  const project = projects.find((p: any) => p.slug === slug);
 
   if (!project) {
-    return <div className="p-10 text-white">Project not found</div>;
+    return (
+      <div className="text-white p-10">
+        Not found: {slug}
+      </div>
+    );
   }
 
   return (
-    <div className="bg-black text-white min-h-screen p-10 max-w-4xl mx-auto">
-      
-      <h1 className="text-4xl font-bold mb-6">{project.title}</h1>
+    <main className="bg-black text-white min-h-screen">
 
-      <div className="space-y-4 mb-10">
-        {project.images.map((img: string, i: number) => (
-          <img key={i} src={img} className="w-full rounded-xl" />
-        ))}
+      <div className="max-w-4xl mx-auto px-6 py-20">
+
+        {/* BACK */}
+        <a
+          href="/#projects"
+          className="text-sm text-zinc-500 hover:text-white mb-6 inline-block"
+        >
+          ← Back
+        </a>
+
+        {/* TITLE */}
+        <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+          {project.title}
+        </h1>
+
+        {/* LOCATION (PROJECTS ONLY) */}
+        {project.location && (
+          <div className="text-sm text-zinc-500 mb-4">
+            {project.location}
+          </div>
+        )}
+
+        {/* TAGS */}
+        <div className="flex flex-wrap gap-2 mb-8">
+          {project.tags?.map((tag: string, i: number) => (
+            <span
+              key={i}
+              className="text-xs px-3 py-1 bg-zinc-800 border border-zinc-700 rounded-full"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        {/* HERO IMAGE */}
+        {project.images?.[0] && (
+          <img
+            src={project.images[0]}
+            className="w-full h-[400px] object-cover rounded-xl mb-10"
+          />
+        )}
+
+        {/* DESCRIPTION */}
+        <p className="text-lg text-zinc-300 mb-10">
+          {project.description}
+        </p>
+
+        {/* CONTENT (BLOG STYLE) */}
+        <div className="space-y-6 text-zinc-400 leading-relaxed text-[15px]">
+
+          {project.content?.map((para: string, i: number) => (
+            <p key={i}>{para}</p>
+          ))}
+
+        </div>
+
+        {/* IMAGE GALLERY */}
+        {project.images?.length > 1 && (
+          <div className="grid md:grid-cols-2 gap-6 mt-16">
+            {project.images.slice(1).map((img: string, i: number) => (
+              <img
+                key={i}
+                src={img}
+                className="rounded-xl object-cover w-full h-64"
+              />
+            ))}
+          </div>
+        )}
+
       </div>
 
-      <div className="space-y-6">
-        <div>
-          <h2 className="text-xl font-semibold">Challenge</h2>
-          <p className="text-zinc-400">{project.challenge}</p>
-        </div>
-
-        <div>
-          <h2 className="text-xl font-semibold">Solution</h2>
-          <p className="text-zinc-400">{project.solution}</p>
-        </div>
-
-        <div>
-          <h2 className="text-xl font-semibold">Outcome</h2>
-          <p className="text-zinc-400">{project.outcome}</p>
-        </div>
-
-        <div>
-          <h2 className="text-xl font-semibold">Systems</h2>
-          <p className="text-zinc-400">{project.systems}</p>
-        </div>
-      </div>
-
-    </div>
+    </main>
   );
 }
