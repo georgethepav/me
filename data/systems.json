@@ -89,16 +89,5 @@
       "Technical Stack",
       "Revit 2024 · Dynamo 2.19.3 · CPython 3 · openpyxl · HTML · jsPDF · SharePoint / OneDrive · AutoCAD 2018 DWG"
     ]
-  },
-  {
-    "title": "Test",
-    "slug": "test",
-    "description": "",
-    "location": "",
-    "tags": [
-      ""
-    ],
-    "images": [],
-    "content": []
   }
 ]
