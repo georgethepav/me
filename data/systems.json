@@ -1,35 +1,18 @@
 [
   {
-    "title": "Automating the Drawing Issue — Revit, Dynamo and a Browser-Based QC Checklist",
-    "slug": "drawing-issue",
-    "description": "How I built an end-to-end drawing issue workflow at BrookerFlynn Architects using Dynamo, Python and a self-contained HTML quality control checklist — cutting issue time from two hours to fifteen minutes.",
-    "tags": [Revit, Dynamo, BIM automation, Architectural Technology, Python, drawing issue, openpyxl, jsPDF, practice technology, workflow automation, BrookerFlynn],
+    "title": "Planning Constraint Calculator",
+    "slug": "planning-calculator",
+    "description": "Automated planning constraints analysis tool for UK residential projects.",
+    "tags": ["Planning", "Automation", "Web Tool"],
     "images": [
       "https://res.cloudinary.com/your-image-1.jpg",
       "https://res.cloudinary.com/your-image-2.jpg"
     ],
     "content": [
-      "Drawing issue sheets are one of those tasks that every architectural practice knows is painful. Cross-referencing sheet numbers, revision codes and dates against what has actually been exported from Revit, building the Excel register by hand, exporting the PDF, chasing people to fill in the distribution list — it is time-consuming, error-prone and beneath the skill level of the people doing it.
-So I fixed it.
-The Problem
-At BrookerFlynn Architects we run WHSmith retail fit-outs across the UK and Europe. A typical issue involves 20 to 60 drawings going out in a single package. Before this workflow existed the process was entirely manual. The data was already sitting in Revit — sheet numbers, revision dates, drawing titles, revision codes — but nobody had written the code to move it automatically into the issue register. Every issue was someone sitting at a screen typing information that the model already knew.
-The other problem was accountability. There was no structured quality control. Drawings went out after an informal check at best. Nothing was recorded. Nothing was filed.
-The Solution
-I built a suite of six Dynamo scripts that run from Dynamo Player in Revit 2024. The technician sees two inputs — a folder picker and optionally a file picker for the previous issue sheet — and a Run button. No graph. No Python. One click.
-The scripts chain seven Python nodes together. Node 00 resolves the correct K Drive path dynamically using the Windows username, so it works on any machine in the office without hardcoded paths. Node 01 reads the Project Number and Store Name directly from Revit Project Information. Node 02 collects every sheet flagged for issue along with its full revision history, reading per-sheet revision numbers so the codes on the register match the titleblock exactly. Node 03 reads all project revisions to build the date column headers.
-Node 04 builds the Excel drawing register from scratch using openpyxl. Formatted headers in the practice teal, date columns with rotated text, drawing rows grouped by series, revision codes derived live from the model, and a full Issued To distribution section at the bottom. On subsequent issues the distribution list is carried forward from the previous Excel file automatically — the user just browses to the old file in Dynamo Player and it copies the rows across, values only, regardless of how many new date columns have been added.
-Node 05 uses Revit 2024's native PDF export API to produce a single merged colour PDF of all issued sheets at 300 DPI, sorted by sheet number. Node 07 exports individually named DWG files in AutoCAD 2018 format, one per sheet, named to the practice standard — job number, discipline code, sheet number, sheet name and revision code.
-The Quality Control Checklist
-This is the part I am most pleased with. Node 06 creates a checking subfolder inside the dated issue folder, copies the master HTML checklist into it, and opens it in Edge or Chrome with the project number and store name already filled in from URL parameters passed on open. The checklist is a fully self-contained single HTML file — no server, no login, no install required.
-The checklist covers 35 items across five sections: titleblock checks, drawing content, PDF print quality, issue sheet verification and final sign-off. When the technician completes the checklist and clicks submit, jsPDF generates a complete quality control record as a PDF download. The file is named automatically using the job number, checker initials, date and time — for example 25.1077_CHECKED_BY_GB_2026-03-25_14-32.pdf — and filed into the checking subfolder alongside the issue package.
-There is a hidden timer. It starts on the first tick and stops when the PDF is generated. The elapsed time is encoded in five-point light grey text at the very bottom of the last page — checker initials followed by hours, minutes and seconds in the format GBH0M12S34. Only visible at 500% zoom in the PDF. The timer exists because checking speed matters. A package checked in two minutes has not been checked properly. The encoded timestamp gives practice management a way to verify that due diligence was applied without making the checker feel surveilled.
-The Results
-Before this workflow a typical drawing issue took between 80 and 160 minutes end to end. It now takes 10 to 15 minutes — almost all of which is the technician working through the quality control checklist. The register is always correctly formatted. Revision codes are always derived from live model data. The QC record is always produced and always filed. There is no longer a version of this process that depends on who happens to be running the issue that day.
-What Comes Next
-The next iteration will read distribution contact names directly from Revit shared parameters, fully automating the Issued To section. After that, transmittal generation — pre-populating a formatted email with the correct recipients, subject line and drawing list ready to send. Further down the line, direct integration with Viewpoint and other common data environments to trigger the CDE upload from within the Dynamo workflow.
-The architecture is generic. The node pipeline is client-agnostic — swapping Node 04 produces a different register format for a different client. The same approach could be applied across any practice running Revit with a structured issue process.
-Technical Stack
-Revit 2024 · Dynamo 2.19.3 · CPython 3 · openpyxl · HTML · jsPDF · SharePoint / OneDrive · AutoCAD 2018 DWG"
+      "The Planning Constraint Calculator was developed to remove the need for manual site analysis during early feasibility stages.",
+      "By aggregating publicly available planning data and applying rule-based logic, the tool enables rapid assessment of development constraints.",
+      "This significantly reduces the time required to determine site viability, allowing faster decision-making and improved project efficiency.",
+      "The system reflects a broader approach of integrating data and automation into traditional architectural workflows."
     ]
   }
 ]
