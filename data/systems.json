@@ -1,25 +1,5 @@
 [
   {
-    "title": "Planning Constraint Calculator",
-    "slug": "planning-calculator",
-    "description": "Automated planning constraints analysis tool for UK residential projects.",
-    "tags": [
-      "Planning",
-      "Automation",
-      "Web Tool"
-    ],
-    "images": [
-      "https://res.cloudinary.com/your-image-1.jpg",
-      "https://res.cloudinary.com/your-image-2.jpg"
-    ],
-    "content": [
-      "The Planning Constraint Calculator was developed to remove the need for manual site analysis during early feasibility stages.",
-      "By aggregating publicly available planning data and applying rule-based logic, the tool enables rapid assessment of development constraints.",
-      "This significantly reduces the time required to determine site viability, allowing faster decision-making and improved project efficiency.",
-      "The system reflects a broader approach of integrating data and automation into traditional architectural workflows."
-    ]
-  },
-  {
     "title": "How I Built a Custom Fee Proposal Tool for Our Architecture Practice Using AI — And What It's Changed",
     "slug": "how-i-built-a-custom-fee-proposal-tool-for-our-architecture-practice-using-ai-and-what-it-s-changed",
     "description": "A practical account of building a bespoke project intake and fee proposal automation tool for BrookerFlynn Architects using Claude AI — covering the brief, the build, and what it means for small practice efficiency.",
