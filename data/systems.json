@@ -3,7 +3,11 @@
     "title": "Planning Constraint Calculator",
     "slug": "planning-calculator",
     "description": "Automated planning constraints analysis tool for UK residential projects.",
-    "tags": ["Planning", "Automation", "Web Tool"],
+    "tags": [
+      "Planning",
+      "Automation",
+      "Web Tool"
+    ],
     "images": [
       "https://res.cloudinary.com/your-image-1.jpg",
       "https://res.cloudinary.com/your-image-2.jpg"
@@ -13,6 +17,52 @@
       "By aggregating publicly available planning data and applying rule-based logic, the tool enables rapid assessment of development constraints.",
       "This significantly reduces the time required to determine site viability, allowing faster decision-making and improved project efficiency.",
       "The system reflects a broader approach of integrating data and automation into traditional architectural workflows."
+    ]
+  },
+  {
+    "title": "How I Built a Custom Fee Proposal Tool for Our Architecture Practice Using AI — And What It's Changed",
+    "slug": "how-i-built-a-custom-fee-proposal-tool-for-our-architecture-practice-using-ai-and-what-it-s-changed",
+    "description": "A practical account of building a bespoke project intake and fee proposal automation tool for BrookerFlynn Architects using Claude AI — covering the brief, the build, and what it means for small practice efficiency.",
+    "location": "",
+    "tags": [
+      "architecture practice management",
+      " AI tools for architects",
+      " fee proposal automation",
+      " small practice efficiency",
+      " Python Flask",
+      " BrookerFlynn Architects",
+      " architectural technology",
+      " practice administration",
+      " RIBA fee calculation",
+      " bespoke practice software"
+    ],
+    "images": [
+      "https://res.cloudinary.com/dgeaojy0i/image/upload/v1774643897/systems/how-i-built-a-custom-fee-proposal-tool-for-our-architecture-practice-using-ai-and-what-it-s-changed/cyeb5vdnaxc67bldsbte.png"
+    ],
+    "content": [
+      "There's a particular kind of admin that every small architecture practice knows well. It sits in the gap between winning a project and actually starting it — the job number requests, the fee letters, the Excel registers that need updating, the Outlook draft you write for the third time that week. It doesn't require design skill. It just takes time.",
+      "I've been thinking about that gap for a while, and over the past few weeks I did something about it. Working with Claude — Anthropic's AI — I built a bespoke internal tool from scratch that automates most of it. I want to write about what that process was actually like, because it's not what I expected.",
+      "What the tool does",
+      "BFA Tools is a locally-hosted web application that runs on any machine in our office. It has two main functions: project intake and fee proposal generation.",
+      "When a new project comes in, whoever is handling it opens the tool in a browser, fills in a structured intake form — unit name, location, scope of works, programme dates, client contact, external project manager — and hits save. The tool writes everything to an Excel project register on our shared drive, and if we don't yet have a job number, it prepares a pre-filled email to our accounts team requesting one. One click, Outlook opens, email ready to send.",
+      "When it's time to produce a fee proposal, the tool pulls the project details from the register, calculates the fee automatically across our tiered matrix — Bronze, Silver and Gold service levels — breaks it down by RIBA work stage, and generates a PDF. Not a generic PDF. A properly formatted BrookerFlynn fee proposal letter, using our actual Word template, with all the fields filled in: the client's name, the project, the tier, the fee, the stage splits, the programme duration, the sign-off. It then opens Outlook with that PDF already attached, addressed to the client and copied to the right people internally.",
+      "The whole thing — from opening the tool to having an Outlook draft ready with the proposal attached — takes a few minutes rather than the better part of an afternoon.",
+      "How it was built",
+      "I want to be specific about this because I think there's a lot of vague talk about \"using AI\" that doesn't really describe what's happening.",
+      "I have no formal programming background. I can read code reasonably well, and I understand how systems fit together, but I couldn't have written this from scratch. What I did was describe what I needed in plain language to Claude, and then work through the build iteratively — reviewing what came back, testing it, identifying problems, and feeding that back.",
+      "The technical stack is Python and Flask running locally, with a browser-based front end. The fee proposal uses our existing Word document as a template — python-docx fills in the relevant fields, docx2pdf converts it using Microsoft Word, and win32com handles the Outlook integration. The project data writes to Excel via openpyxl. None of that required me to understand every line — but I did need to understand what each part was doing well enough to explain what wasn't working.",
+      "That's actually the most honest description of what working with AI on a technical project feels like: you're the product manager and the QA tester. You define the brief, you evaluate the output, you identify the failures, and you push for the fix. The AI writes the code. The back-and-forth is real — there were threading issues with Windows COM, path resolution problems across OneDrive synced folders, a PDF template replacement that kept duplicating the project name. Each one got diagnosed and fixed through conversation.",
+      "What it's actually changed",
+      "The efficiency gain is obvious and real. Fee proposals that used to take an hour — finding the right template, filling in the fields, calculating the fees, reformatting the stage splits, sending the email — now take a few minutes. The register stays up to date automatically. Job number requests go out consistently with the right information. There's less chance of a mistake in the fee calculation.",
+      "But there's something less obvious that I think matters more: the process of building it forced me to think clearly about how we actually work. You can't describe a workflow to an AI without first understanding it yourself. What fields does a project intake really need? What information should carry through from intake to fee proposal automatically? What's the right split between what the tool decides and what the architect decides? I had answers to all of those questions before we started, but they were tacit — held in habit rather than written down. The build process made them explicit.",
+      "That's useful regardless of the tool. It's a form of process documentation that produces something functional at the end of it.",
+      "Where this fits in practice management more broadly",
+      "Small architecture practices are not well served by most practice management software. The off-the-shelf options are either designed for much larger organisations, priced accordingly, or general enough that they don't reflect how architects actually track work. The result is that most small practices run on a combination of Excel, Word templates, shared drives, and individual habit — which works until it doesn't.",
+      "What's changed is that building something bespoke is no longer out of reach. The barrier was always development cost and time. AI-assisted development doesn't eliminate that barrier entirely, but it moves it significantly. A practice principal with domain knowledge and a clear brief can now build tools that fit their actual workflow rather than adapting their workflow to fit a product someone else designed.",
+      "That's a meaningful shift. I don't think it replaces the need for good practice management thinking — if anything it demands more of it — but it puts custom tooling within reach in a way it wasn't before.",
+      "What's next",
+      "The immediate next step is connecting the tool to SharePoint so the registers sync properly across the team. Beyond that, I'm thinking about automated project status tracking, integration with our invoicing process, and a dashboard that shows live project status across an active portfolio.",
+      "None of that is complicated in principle. It's just a matter of defining the brief clearly enough to build it — which, as it turns out, is most of the work."
     ]
   }
 ]
