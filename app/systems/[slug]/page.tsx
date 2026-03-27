@@ -1,12 +1,24 @@
 export const dynamic = "force-dynamic";
 
-import systems from "../../../data/systems.json";
+import fs from "fs";
+import path from "path";
 
 export default function SystemPage({ params }: any) {
-  const system = systems.find((s: any) => s.slug === params.slug);
+  const filePath = path.join(process.cwd(), "data", "systems.json");
+
+  const fileData = fs.readFileSync(filePath, "utf-8");
+  const systems = JSON.parse(fileData);
+
+  const slug = params.slug;
+
+  const system = systems.find((s: any) => s.slug === slug);
 
   if (!system) {
-    return <div className="text-white p-10">Not found</div>;
+    return (
+      <div className="text-white p-10">
+        Not found: {slug}
+      </div>
+    );
   }
 
   return (
@@ -14,7 +26,7 @@ export default function SystemPage({ params }: any) {
 
       <div className="max-w-4xl mx-auto px-6 py-20">
 
-        {/* BACK LINK */}
+        {/* BACK */}
         <a
           href="/#systems"
           className="text-sm text-zinc-500 hover:text-white mb-6 inline-block"
@@ -23,7 +35,7 @@ export default function SystemPage({ params }: any) {
         </a>
 
         {/* TITLE */}
-        <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+        <h1 className="text-4xl md:text-5xl font-bold mb-6">
           {system.title}
         </h1>
 
@@ -39,7 +51,7 @@ export default function SystemPage({ params }: any) {
           ))}
         </div>
 
-        {/* HERO IMAGE */}
+        {/* HERO */}
         {system.images?.[0] && (
           <img
             src={system.images[0]}
@@ -52,16 +64,14 @@ export default function SystemPage({ params }: any) {
           {system.description}
         </p>
 
-        {/* CONTENT (BLOG STYLE) */}
-        <div className="space-y-6 text-zinc-400 leading-relaxed text-[15px]">
-
+        {/* CONTENT */}
+        <div className="space-y-6 text-zinc-400 leading-relaxed">
           {system.content?.map((para: string, i: number) => (
             <p key={i}>{para}</p>
           ))}
-
         </div>
 
-        {/* IMAGE GALLERY */}
+        {/* GALLERY */}
         {system.images?.length > 1 && (
           <div className="grid md:grid-cols-2 gap-6 mt-16">
             {system.images.slice(1).map((img: string, i: number) => (
