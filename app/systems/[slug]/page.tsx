@@ -3,8 +3,8 @@ export const dynamic = "force-dynamic";
 import fs from "fs";
 import path from "path";
 
-export default function SystemPage({ params }: { params: { slug: string } }) {
-  const slug = params.slug;
+export default async function SystemPage({ params }: any) {
+  const { slug } = await params;
 
   const filePath = path.join(process.cwd(), "data", "systems.json");
   const fileData = fs.readFileSync(filePath, "utf-8");
