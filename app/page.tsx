@@ -93,7 +93,7 @@ export default function Home() {
       <img
         src="/logos/urbanbrief.png"
         alt="UrbanBrief"
-        className="h-12 mb-4 object-contain"
+        className="h-36 mb-4 object-contain"
       />
 
       <p className="text-sm text-zinc-400">
@@ -108,7 +108,7 @@ export default function Home() {
       <img
         src="/logos/grivoblinx.png"
         alt="GrivoBlinx"
-        className="h-12 mb-4 object-contain"
+        className="h-36 mb-4 object-contain"
       />
 
       <p className="text-sm text-zinc-400">
