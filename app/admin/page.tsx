@@ -13,6 +13,7 @@ export default function AdminPage() {
     description: "",
     location: "",
     tags: "",
+    content: "", // 👈 NEW
   });
 
   const [files, setFiles] = useState<FileList | null>(null);
@@ -30,7 +31,7 @@ export default function AdminPage() {
     formData.append("type", type);
 
     Object.entries(form).forEach(([key, value]) => {
-      formData.append(key, value);
+      formData.append(key, value as string);
     });
 
     if (files) {
@@ -68,7 +69,7 @@ export default function AdminPage() {
 
         <h1 className="text-3xl mb-6">Admin Panel</h1>
 
-        {/* TYPE SWITCH */}
+        {/* TYPE */}
         <select
           value={type}
           onChange={(e) => setType(e.target.value)}
@@ -96,7 +97,7 @@ export default function AdminPage() {
         <textarea
           name="description"
           onChange={handleChange}
-          placeholder="Description"
+          placeholder="Short description"
           className="w-full mb-3 p-2 bg-zinc-800"
         />
 
@@ -105,6 +106,14 @@ export default function AdminPage() {
           onChange={handleChange}
           placeholder="Tags (comma separated)"
           className="w-full mb-3 p-2 bg-zinc-800"
+        />
+
+        {/* 👇 NEW CONTENT FIELD */}
+        <textarea
+          name="content"
+          onChange={handleChange}
+          placeholder="Full write-up (separate paragraphs with a blank line)"
+          className="w-full mb-4 p-2 bg-zinc-800 h-40"
         />
 
         {/* FILE UPLOAD */}
@@ -122,7 +131,7 @@ export default function AdminPage() {
           Add Entry
         </button>
 
-        {/* LIST EXISTING */}
+        {/* EXISTING */}
         <h2 className="text-xl mb-4">Existing Entries</h2>
 
         <div className="space-y-4">
