@@ -16,25 +16,38 @@ export default function Home() {
       <Navbar />
 
       {/* HERO */}
-      <section className="text-center py-40 px-6">
-        <h1 className="text-5xl md:text-6xl font-bold leading-tight tracking-tight">
-          <span className="bg-gradient-to-r from-white to-zinc-500 bg-clip-text text-transparent">
-            Designing Expertly.
-          </span>
-          <br />
-          <span className="bg-gradient-to-r from-white to-zinc-500 bg-clip-text text-transparent">
-            Building Systems.
-          </span>
-          <br />
-          <span className="bg-gradient-to-r from-white to-zinc-500 bg-clip-text text-transparent">
-            Thinking Differently.
-          </span>
-        </h1>
+      <section className="relative min-h-[80vh] flex items-center justify-center text-center overflow-hidden">
 
-        <p className="mt-6 text-zinc-400 max-w-2xl mx-auto">
-          Architectural Technologist combining design, development thinking and intelligent workflows to deliver better, faster outcomes.
-        </p>
-      </section>
+  {/* IMAGE BACKGROUND */}
+  <div className="absolute inset-0 flex justify-end">
+    <img
+      src="/GB.png"
+      className="h-full object-cover opacity-30 blur-[1px] translate-x-10 md:translate-x-0"
+    />
+
+    {/* DARK FADE OVERLAY */}
+    <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent"></div>
+  </div>
+
+  {/* CONTENT */}
+  <div className="relative z-10 max-w-4xl px-6">
+
+    <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6">
+      Designing Expertly.
+      <br />
+      Building Systems.
+      <br />
+      Thinking Differently.
+    </h1>
+
+    <p className="text-zinc-400 text-lg max-w-2xl mx-auto">
+      Architectural technologist combining design, development thinking and
+      intelligent workflows to deliver better, faster outcomes.
+    </p>
+
+  </div>
+
+</section>
 
       {/* PROJECTS */}
       <section id="projects" className="px-6 pb-24 max-w-6xl mx-auto">
