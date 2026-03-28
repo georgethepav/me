@@ -89,5 +89,43 @@
       "Technical Stack",
       "Revit 2024 · Dynamo 2.19.3 · CPython 3 · openpyxl · HTML · jsPDF · SharePoint / OneDrive · AutoCAD 2018 DWG"
     ]
+  },
+  {
+    "title": "How I Built a Full Property Intelligence Tool Using AI, Automation and a Modern Web Stack",
+    "slug": "how-i-built-a-full-property-intelligence-tool-using-ai-automation-and-a-modern-web-stack",
+    "description": "A breakdown of how I designed and built a property renovation and extension calculator using a hybrid cost engine, AI-generated reports, and a lightweight deployable web stack.",
+    "location": "",
+    "tags": [
+      "renovation cost calculator",
+      " house renovation UK",
+      " extension cost UK",
+      " property development tools",
+      " proptech UK",
+      " construction costs UK",
+      " AI tools property",
+      " renovation budgeting",
+      " building costs UK",
+      " architectural technology",
+      " side hustle UK",
+      " digital tools property",
+      " property investment UK",
+      " home renovation planning",
+      " cost per m2 UK"
+    ],
+    "images": [
+      "https://res.cloudinary.com/dgeaojy0i/image/upload/v1774680427/systems/how-i-built-a-full-property-intelligence-tool-using-ai-automation-and-a-modern-web-stack/grlavoe03rsrwe0jbvkr.jpg"
+    ],
+    "content": [
+      "Over the past few weeks I have been building a small but powerful digital product to test how far I can push a combination of construction knowledge, automation and AI. The goal was not just to create a calculator but to design a system that takes structured inputs, processes them through a rules-based cost engine and outputs something that feels like a professional report.",
+      "The project started with the core logic rather than the interface. I built a hybrid cost engine that combines cost per square metre benchmarks, regional multipliers and component-based adjustments such as kitchens, bathrooms and services. This was initially developed in Excel to test different scenarios quickly and refine the logic before writing any code. Once the outputs felt consistent and realistic I translated that structure into a reusable JavaScript module that can be shared across multiple tools.",
+      "From there I built two separate calculators, one for full property renovations and one specifically for extensions. Both tools use the same underlying cost engine but different input layers depending on the type of project. This modular approach means new tools can be added easily without rebuilding the logic each time.",
+      "The frontend is intentionally lightweight. It uses a multi-step form structure with simple button-based inputs to reduce friction and improve completion rates. Everything is designed to run as a static site so it can be deployed quickly and cheaply using a GitHub-based workflow and platforms like Vercel or Netlify.",
+      "On the backend side I designed the system to use serverless functions. These handle calculations, process user inputs and prepare structured data for the report stage. Keeping this layer simple and modular means it can scale without needing a complex infrastructure.",
+      "AI is then layered on top of the structured data rather than replacing it. Instead of asking AI to generate costs, which would be unreliable, I use it to interpret the outputs from the cost engine. It generates clean summaries, highlights risks and produces a structured report that reads like something a professional might write. This separation between logic and language is key to keeping the system accurate while still benefiting from AI.",
+      "The overall architecture is designed to be repeatable. Each new tool follows the same pattern. A defined input set feeds into a shared logic engine, which produces structured outputs that are then enhanced by AI. Payments and upgrades can be layered in using Stripe, and reports can be generated instantly without any manual involvement.",
+      "What this project has really demonstrated is how quickly a relatively complex idea can be turned into a working product by combining the right pieces. A clear data model, a modular cost engine, a simple frontend and AI used in a controlled way creates something that is both scalable and commercially viable.",
+      "More importantly it shows how technical knowledge from construction can be translated into digital systems. Instead of delivering value through drawings or reports on a one-to-one basis, it can be packaged into tools that run automatically and reach far more people.",
+      "This is the direction I am interested in exploring further. Building systems that sit somewhere between technical expertise and digital products, where the output is immediate, useful and scalable without requiring constant input."
+    ]
   }
 ]
