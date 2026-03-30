@@ -42,21 +42,9 @@ export default function SystemCard({ system }: any) {
             {system.title}
           </h3>
 
-          <p className="text-sm text-zinc-400 mb-4 line-clamp-2">
+          <p className="text-sm text-zinc-400 line-clamp-2">
             {system.description}
           </p>
-
-          {/* TAGS */}
-          <div className="flex flex-wrap gap-2">
-            {system.tags?.map((tag: string, i: number) => (
-              <span
-                key={i}
-                className="text-xs px-2 py-1 bg-zinc-800 rounded-full border border-zinc-700"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
 
         </div>
 
