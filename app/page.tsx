@@ -16,7 +16,7 @@ export default function Home() {
       <Navbar />
 
       {/* -- HERO -------------------------------------------------------- */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+      <section className="relative min-h-screen md:min-h-[90vh] flex items-center overflow-hidden">
 
         {/* BACKGROUND IMAGE -- centred, cropped upward */}
         <div className="absolute inset-0">
@@ -24,7 +24,7 @@ export default function Home() {
             src="/GB.png"
             alt="George Billam"
             className="absolute inset-0 w-full h-full object-cover"
-            style={{ objectPosition: "center 20%" }}
+            style={{ objectPosition: "center 15%" }}
           />
           {/* Dark overlay */}
           <div className="absolute inset-0 bg-black/55" />
@@ -33,7 +33,7 @@ export default function Home() {
         </div>
 
         {/* CONTENT -- centred */}
-        <div className="relative z-10 max-w-6xl mx-auto px-6 py-32 w-full flex flex-col items-center text-center">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 pt-28 pb-20 md:py-32 w-full flex flex-col items-center text-center">
           <div className="max-w-2xl">
 
             <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6 text-white">
@@ -149,7 +149,7 @@ export default function Home() {
 
       </section>
 
-      {/* -- OTHER VENTURES ---------------------------------------------- */}
+      {/* -- OTHER VENTURE ----------------------------------------------- */}
       <section id="ventures" className="px-6 pb-24 max-w-6xl mx-auto">
 
         <h2 className="text-3xl font-semibold mb-4">
@@ -160,7 +160,7 @@ export default function Home() {
           Independent ventures and tools exploring new ways to create value within the built environment.
         </p>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 gap-6">
 
           {/* URBANBRIEF */}
           <a
@@ -169,7 +169,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="bg-zinc-900 rounded-xl p-6 hover:scale-[1.03] transition flex flex-col items-center text-center group"
           >
-            <div className="w-full flex items-center justify-center mb-5"
+            <div className="w5full flex items-center justify-center mb-5"
               style={{ height: "120px" }}>
               <img
                 src="/logos/urbanbrief.png"
@@ -185,11 +185,24 @@ export default function Home() {
             </p>
           </a>
 
-          {/* GRIVOBLINX -- coming soon, no logo, no link */}
+          {/* GRIVOBLINX -- coming soon */}
           <div className="bg-zinc-900 rounded-xl p-6 flex flex-col items-center text-center">
 
-            <div className="mb-5 flex items-center justify-center w-full" style={{ height: "120px" }}>
-              <span className="text-xs font-semibold tracking-widest text-zinc-600 uppercase border border-zinc-700 px-4 py-2 rounded-full">
+            <div className="w-full flex items-center justify-center mb-5" style={{ height: "120px" }}>
+              <img
+                src="/logos/grivoblinx.png"
+                alt="GrivoBlinx"
+                className="max-h-full max-w-full object-contain"
+                onError={(e) => {
+                  (e.currentTarget as HTMLImageElement).style.display = "none";
+                  const next = e.currentTarget.nextElementSibling as HTMLElement | null;
+                  if (next) next.style.display = "flex";
+                }}
+              />
+              <span
+                className="text-xs font-semibold tracking-widest text-zinc-600 uppercase border border-zinc-700 px-4 py-2 rounded-full"
+                style={{ display: "none" }}
+              >
                 Coming Soon
               </span>
             </div>
@@ -197,19 +210,6 @@ export default function Home() {
             <p className="text-base font-semibold text-zinc-400 mb-2">GrivoBlinx</p>
             <p className="text-sm text-zinc-500">
               Automation-led workflows and systems for scalable development. Currently in build.
-            </p>
-
-          </div>
-
-          {/* PLACEHOLDER SLOT */}
-          <div className="bg-zinc-900 rounded-xl p-6 flex flex-col items-center text-center">
-
-            <div className="h-16 w-24 mb-5 bg-zinc-800 rounded flex items-center justify-center text-xs text-zinc-600">
-              Coming Soon
-            </div>
-
-            <p className="text-sm text-zinc-500">
-              New tools and ventures currently in development.
             </p>
 
           </div>
@@ -275,7 +275,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* -- CONTACT ------------------------------------------------------ */}
+      {/* -- CONTACT ----------------------------------------------------- */}
       <section id="contact" className="px-6 py-24 border-t border-zinc-800">
         <div className="max-w-6xl mx-auto">
 
@@ -338,7 +338,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* -- FOOTER -------------------------------------------------------- */}
+      {/* -- FOOTER ------------------------------------------------------ */}
       <footer className="border-t border-zinc-800 px-6 py-10">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
 
@@ -384,7 +384,7 @@ export default function Home() {
               <img
                 src="/logos/urbanbrief.png"
                 alt="Urban Brief"
-                className="h/bject-contain"
+                className="h-5 w-auto object-contain opacity-80"
               />
             </a>
 
