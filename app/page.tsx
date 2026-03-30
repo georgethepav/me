@@ -15,26 +15,26 @@ export default function Home() {
 
       <Navbar />
 
-      {/* ââ HERO âââââââââââââââââââââââââââââââââââââââââââââââââââââââ */}
+      {/* -- HERO -------------------------------------------------------- */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
 
-        {/* BACKGROUND IMAGE â right-anchored, much more visible */}
+        {/* BACKGROUND IMAGE -- centred, cropped upward */}
         <div className="absolute inset-0">
           <img
             src="/GB.png"
             alt="George Billam"
-            className="absolute right-0 top-0 h-full w-auto object-cover object-right"
-            style={{ maxWidth: "70%" }}
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ objectPosition: "center 20%" }}
           />
-          {/* Gradient: opaque black on left fading to semi-transparent right */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/75 to-black/25" />
+          {/* Dark overlay */}
+          <div className="absolute inset-0 bg-black/55" />
           {/* Subtle bottom fade for section continuity */}
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent" />
         </div>
 
-        {/* CONTENT â left-aligned split layout */}
-        <div className="relative z-10 max-w-6xl mx-auto px-6 py-32 w-full">
-          <div className="max-w-xl">
+        {/* CONTENT -- centred */}
+        <div className="relative z-10 max-w-6xl mx-auto px-6 py-32 w-full flex flex-col items-center text-center">
+          <div className="max-w-2xl">
 
             <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6 text-white">
               Designing Expertly.<br />
@@ -61,7 +61,7 @@ export default function Home() {
 
       </section>
 
-      {/* ââ ABOUT ââââââââââââââââââââââââââââââââââââââââââââââââââââââ */}
+      {/* -- ABOUT ------------------------------------------------------- */}
       <section id="about" className="px-6 py-24 max-w-6xl mx-auto">
 
         <div className="grid md:grid-cols-2 gap-16 items-start">
@@ -76,17 +76,17 @@ export default function Home() {
 
           <div className="space-y-5 text-zinc-300 leading-relaxed text-[15px]">
             <p>
-              I'm an architectural technologist and principal designer with over 18 years' experience
+              I&apos;m an architectural technologist and principal designer with over 18 years&apos; experience
               delivering complex commercial retail projects across the UK, Europe and the Middle East.
               I lead a small studio team at BrookerFlynn Architects, specialising in airport retail
-              fit-out â clients include WHSmith and its associated brands. My day-to-day spans
+              fit-out &mdash; clients include WHSmith and its associated brands. My day-to-day spans
               detailed Revit-based BIM design, UK building regulations and landlord approvals, and
               coordinating with in-country technical architects on international projects.
             </p>
             <p>
               Alongside my architectural practice, I build the systems, tools and automations that
-              make design studios run faster and smarter â from AI-powered fee proposal tools to
-              end-to-end drawing issue workflows. I'm also the founder of{" "}
+              make design studios run faster and smarter &mdash; from AI-powered fee proposal tools to
+              end-to-end drawing issue workflows. I&apos;m also the founder of{" "}
               <a
                 href="https://urbanbrief.co.uk"
                 target="_blank"
@@ -95,7 +95,7 @@ export default function Home() {
               >
                 Urban Brief
               </a>
-              , a data-driven property intelligence platform, and I'm developing further ventures at
+              , a data-driven property intelligence platform, and I&apos;m developing further ventures at
               the intersection of architecture, technology and passive income.
             </p>
             <p className="text-zinc-500 text-sm">
@@ -107,7 +107,7 @@ export default function Home() {
 
       </section>
 
-      {/* ââ PROJECTS âââââââââââââââââââââââââââââââââââââââââââââââââââ */}
+      {/* -- PROJECTS ---------------------------------------------------- */}
       <section id="projects" className="px-6 pb-24 max-w-6xl mx-auto">
 
         <h2 className="text-3xl font-semibold mb-4">
@@ -115,7 +115,7 @@ export default function Home() {
         </h2>
 
         <p className="text-zinc-400 max-w-3xl mb-12">
-          Architectural and design professional with over 18 years' experience in construction,
+          Architectural and design professional with over 18 years&apos; experience in construction,
           delivering complex retail projects across the UK, Europe and The Middle East. Specialising
           in refits, refurbishments and full fit-outs for high-profile environments including airports
           and major retail destinations.
@@ -129,7 +129,7 @@ export default function Home() {
 
       </section>
 
-      {/* ââ APPLIED INTELLIGENCE âââââââââââââââââââââââââââââââââââââââ */}
+      {/* -- APPLIED INTELLIGENCE ---------------------------------------- */}
       <section id="systems" className="px-6 pb-24 max-w-6xl mx-auto">
 
         <h2 className="text-3xl font-semibold mb-4">
@@ -149,7 +149,7 @@ export default function Home() {
 
       </section>
 
-      {/* ââ OTHER VENTURES âââââââââââââââââââââââââââââââââââââââââââââ */}
+      {/* -- OTHER VENTURES ---------------------------------------------- */}
       <section id="ventures" className="px-6 pb-24 max-w-6xl mx-auto">
 
         <h2 className="text-3xl font-semibold mb-4">
@@ -185,7 +185,7 @@ export default function Home() {
             </p>
           </a>
 
-          {/* GRIVOBLINX â coming soon, no logo, no link */}
+          {/* GRIVOBLINX -- coming soon, no logo, no link */}
           <div className="bg-zinc-900 rounded-xl p-6 flex flex-col items-center text-center">
 
             <div className="mb-5 flex items-center justify-center w-full" style={{ height: "120px" }}>
@@ -218,7 +218,7 @@ export default function Home() {
 
       </section>
 
-      {/* ââ WORK WITH ME âââââââââââââââââââââââââââââââââââââââââââââââ */}
+      {/* -- WORK WITH ME ------------------------------------------------ */}
       <section id="work-with-me" className="px-6 py-24 border-t border-zinc-800">
         <div className="max-w-6xl mx-auto">
 
@@ -227,12 +227,12 @@ export default function Home() {
             <div>
               <p className="text-xs font-semibold tracking-widest text-zinc-500 uppercase mb-4">Work With Me</p>
               <h2 className="text-4xl font-bold leading-tight mb-6">
-                Let's build something that actually works.
+                Let&apos;s build something that actually works.
               </h2>
               <p className="text-zinc-400 leading-relaxed mb-8">
                 Whether you need architectural design and BIM delivery, a systems thinker to untangle
-                your practice workflows, or someone to build the AI tools your team keeps asking for â
-                I'm available for the right projects.
+                your practice workflows, or someone to build the AI tools your team keeps asking for &mdash;
+                I&apos;m available for the right projects.
               </p>
               <a
                 href="#contact"
@@ -255,7 +255,7 @@ export default function Home() {
                 },
                 {
                   title: "Systems Thinking for Practices",
-                  desc: "End-to-end workflow design â from fee proposals and drawing issue to project tracking and reporting.",
+                  desc: "End-to-end workflow design \u2014 from fee proposals and drawing issue to project tracking and reporting.",
                 },
                 {
                   title: "Digital Product Development",
@@ -275,7 +275,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ââ CONTACT ââââââââââââââââââââââââââââââââââââââââââââââââââââ */}
+      {/* -- CONTACT ------------------------------------------------------ */}
       <section id="contact" className="px-6 py-24 border-t border-zinc-800">
         <div className="max-w-6xl mx-auto">
 
@@ -289,7 +289,19 @@ export default function Home() {
               href="mailto:billamgeorge@gmail.com"
               className="flex items-center gap-4 bg-zinc-900 border border-zinc-800 rounded-xl px-6 py-5 hover:border-zinc-600 transition group"
             >
-              <span className="text-2xl">â</span>
+              <svg
+                className="w-6 h-6 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={1.5}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+                />
+              </svg>
               <div>
                 <p className="text-xs text-zinc-500 mb-0.5 uppercase tracking-wide">Email</p>
                 <p className="text-white text-sm font-medium group-hover:text-zinc-300 transition">
@@ -316,7 +328,7 @@ export default function Home() {
               <div>
                 <p className="text-xs text-zinc-500 mb-0.5 uppercase tracking-wide">LinkedIn</p>
                 <p className="text-white text-sm font-medium group-hover:text-zinc-300 transition">
-                  george-billam-65b4bb48
+                  Connect on LinkedIn
                 </p>
               </div>
             </a>
@@ -326,13 +338,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ââ FOOTER âââââââââââââââââââââââââââââââââââââââââââââââââââââ */}
+      {/* -- FOOTER -------------------------------------------------------- */}
       <footer className="border-t border-zinc-800 px-6 py-10">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
 
-          {/* LEFT â copyright + email */}
+          {/* LEFT -- copyright + email */}
           <div className="space-y-2">
-            <p className="text-sm text-zinc-400">Â© 2025 George Billam</p>
+            <p className="text-sm text-zinc-400">&copy; 2025 George Billam</p>
             <a
               href="mailto:billamgeorge@gmail.com"
               className="text-sm text-zinc-500 hover:text-white transition"
@@ -341,14 +353,14 @@ export default function Home() {
             </a>
           </div>
 
-          {/* CENTRE â nav links */}
+          {/* CENTRE -- nav links */}
           <div className="flex gap-6 text-sm text-zinc-500">
             <a href="#projects" className="hover:text-white transition">Projects</a>
             <a href="#systems" className="hover:text-white transition">Systems</a>
             <a href="#work-with-me" className="hover:text-white transition">Work With Me</a>
           </div>
 
-          {/* RIGHT â LinkedIn + Urban Brief */}
+          {/* RIGHT -- LinkedIn + Urban Brief */}
           <div className="flex items-center gap-6">
 
             <a
@@ -372,7 +384,7 @@ export default function Home() {
               <img
                 src="/logos/urbanbrief.png"
                 alt="Urban Brief"
-                className="h-6 object-contain"
+                className="h/bject-contain"
               />
             </a>
 
