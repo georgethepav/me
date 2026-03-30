@@ -69,23 +69,22 @@ export default function Home() {
           <div>
             <p className="text-xs font-semibold tracking-widest text-zinc-500 uppercase mb-4">About</p>
             <h2 className="text-3xl font-semibold mb-6 leading-snug">
-              18 years of architecture.<br />
-              A decade of building systems.
+              18+ Years of Architecture &amp; Construction experience, over a decade of building systems.
             </h2>
           </div>
 
           <div className="space-y-5 text-zinc-300 leading-relaxed text-[15px]">
             <p>
-              I&apos;m an architectural technologist and principal designer with over 18 years&apos; experience
+              I&apos;m an Architectural Technologist with over 18 years&apos; experience in construction and
               delivering complex commercial retail projects across the UK, Europe and the Middle East.
-              I lead a small studio team at BrookerFlynn Architects, specialising in airport retail
-              fit-out &mdash; clients include WHSmith and its associated brands. My day-to-day spans
+              I lead a small studio team at BrookerFlynn Architects, specialising in travel &amp; airport
+              retail fit-out clients and their associated brands. My day-to-day spans
               detailed Revit-based BIM design, UK building regulations and landlord approvals, and
               coordinating with in-country technical architects on international projects.
             </p>
             <p>
-              Alongside my architectural practice, I build the systems, tools and automations that
-              make design studios run faster and smarter &mdash; from AI-powered fee proposal tools to
+              Alongside my work at Brookerflynn Architects, I build the systems, tools and automations that
+              make design studios run faster and smarter, from AI-powered fee proposal tools to
               end-to-end drawing issue workflows. I&apos;m also the founder of{" "}
               <a
                 href="https://urbanbrief.co.uk"
@@ -115,9 +114,8 @@ export default function Home() {
         </h2>
 
         <p className="text-zinc-400 max-w-3xl mb-12">
-          Architectural and design professional with over 18 years&apos; experience in construction,
-          delivering complex retail projects across the UK, Europe and The Middle East. Specialising
-          in refits, refurbishments and full fit-outs for high-profile environments including airports
+          At Brookerflynn I&apos;m delivering complex retail projects across the UK, Europe and The Middle East.
+          Specialising in refits, refurbishments and full fit-outs for high-profile environments including airports
           and major retail destinations.
         </p>
 
@@ -149,7 +147,7 @@ export default function Home() {
 
       </section>
 
-      {/* -- OTHER VENTURE ----------------------------------------------- */}
+      {/* -- OTHER VENTURES ---------------------------------------------- */}
       <section id="ventures" className="px-6 pb-24 max-w-6xl mx-auto">
 
         <h2 className="text-3xl font-semibold mb-4">
@@ -169,7 +167,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="bg-zinc-900 rounded-xl p-6 hover:scale-[1.03] transition flex flex-col items-center text-center group"
           >
-            <div className="w5full flex items-center justify-center mb-5"
+            <div className="w-full flex items-center justify-center mb-5"
               style={{ height: "120px" }}>
               <img
                 src="/logos/urbanbrief.png"
