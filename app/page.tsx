@@ -185,7 +185,7 @@ export default function Home() {
 
           {/* GRIVOBLINX */}
           <a
-            href="https://grivoblinx.vercel.app"
+            href="https://grivoblinx.com"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-zinc-900 rounded-xl p-6 hover:scale-[1.03] transition flex flex-col items-center text-center group"
