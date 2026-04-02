@@ -183,34 +183,29 @@ export default function Home() {
             </p>
           </a>
 
-          {/* GRIVOBLINX -- coming soon */}
-          <div className="bg-zinc-900 rounded-xl p-6 flex flex-col items-center text-center">
-
-            <div className="w-full flex items-center justify-center mb-5" style={{ height: "120px" }}>
+          {/* GRIVOBLINX */}
+          <a
+            href="https://grivoblinx.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-zinc-900 rounded-xl p-6 hover:scale-[1.03] transition flex flex-col items-center text-center group"
+          >
+            <div className="w-full flex items-center justify-center mb-5"
+              style={{ height: "120px" }}>
               <img
                 src="/logos/grivoblinx.png"
                 alt="GrivoBlinx"
                 className="max-h-full max-w-full object-contain"
-                onError={(e) => {
-                  (e.currentTarget as HTMLImageElement).style.display = "none";
-                  const next = e.currentTarget.nextElementSibling as HTMLElement | null;
-                  if (next) next.style.display = "flex";
-                }}
+                style={{ filter: "brightness(1.05)" }}
               />
-              <span
-                className="text-xs font-semibold tracking-widest text-zinc-600 uppercase border border-zinc-700 px-4 py-2 rounded-full"
-                style={{ display: "none" }}
-              >
-                Coming Soon
-              </span>
             </div>
 
-            <p className="text-base font-semibold text-zinc-400 mb-2">GrivoBlinx</p>
+            <p className="text-base font-semibold text-zinc-100 mb-2">GrivoBlinx</p>
             <p className="text-sm text-zinc-500">
-              Automation-led workflows and systems for scalable development. Currently in build.
+              Bespoke AI tools and workflow automation for design and construction practices.
             </p>
 
-          </div>
+          </a>
 
         </div>
 
