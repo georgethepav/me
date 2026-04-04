@@ -172,7 +172,7 @@ export default function Home() {
               <img
                 src="/logos/urbanbrief.png"
                 alt="Urban Brief"
-                className="max-h-full max-w-full object-contain"
+                className="max-h-full max-w-full object-contain rounded-xl"
                 style={{ filter: "brightness(1.05)" }}
               />
             </div>
