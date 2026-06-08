@@ -247,7 +247,7 @@ export default function Home() {
                 },
                 {
                   title: "AI-Assisted Visualisation",
-                  desc: "Rapid concept visuals and leasing presentation materials using an AI-assisted SketchUp pipeline - leasing-quality output without a dedicated visualiser.",
+                  desc: "Rapid concept visuals and leasing presentation materials using SketchUp, Enscape and an AI pipeline - photorealistic renders and styled concept images, in-house, same day.",
                 },
                 {
                   title: "AI Workflow Consultancy",

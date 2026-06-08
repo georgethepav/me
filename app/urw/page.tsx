@@ -53,6 +53,7 @@ const landlordFrameworks = [
 const tooling = [
   "Revit",
   "SketchUp",
+  "Enscape",
   "BIM",
   "AutoCAD",
   "Dynamo",
@@ -296,23 +297,25 @@ export default function URWPage() {
                 AI-Assisted Visualisation
               </p>
               <h2 className="text-3xl font-semibold mb-6 leading-snug">
-                SketchUp to leasing-ready visual in under 20 minutes.
+                SketchUp, Enscape and AI - concept to leasing visual, in-house, same day.
               </h2>
               <p className="text-zinc-400 text-[15px] leading-relaxed mb-6">
-                The role asks for someone who can use in-house AI tools to rapidly produce creative
+                The role asks for someone who can use in-house tools to rapidly produce creative
                 visualisations and leasing presentations, and self-produce 3D modelling. That is
                 precisely how I work.
               </p>
               <p className="text-zinc-400 text-[15px] leading-relaxed mb-6">
-                I use SketchUp as my primary massing and concept modelling tool, connected to an
-                AI-assisted pipeline that takes a spatial layout and returns a polished, leasing-quality
-                render - without a dedicated visualiser in the loop. The result is fast enough to use
-                in a live design meeting and good enough to go into a leasing deck.
+                I use SketchUp for fast concept massing and spatial layout, Enscape for real-time
+                photorealistic rendering directly within SketchUp, and an AI pipeline for styled
+                concept images. All three outputs come from the same model. A sketchy concept view,
+                a photorealistic walkthrough and a polished leasing-deck image can all be produced
+                in the same session - without a visualiser, without an external agency, without a
+                multi-day turnaround.
               </p>
               <p className="text-zinc-400 text-[15px] leading-relaxed">
                 Combined with Revit for detailed technical delivery, this gives me a full range from
-                early concept through to construction-ready package - in-house, under my own control,
-                at the speed a leasing-driven environment demands.
+                early concept through to construction-ready package - in-house, at the speed a
+                leasing-driven environment demands.
               </p>
             </div>
 
@@ -323,8 +326,12 @@ export default function URWPage() {
                   body: "SketchUp for quick spatial layouts, unit proportions and facade studies. Fast enough to iterate live with a leasing team or brand.",
                 },
                 {
+                  heading: "Enscape real-time rendering",
+                  body: "Enscape runs live inside SketchUp - photorealistic renders, walkthroughs and lighting studies update in real time as the model changes. No separate software, no export, no overnight batch.",
+                },
+                {
                   heading: "AI render pipeline",
-                  body: "AI-assisted rendering from SketchUp geometry produces leasing-quality visuals without a visualiser. Style-controllable, brand-adjustable, turnaround measured in minutes not days.",
+                  body: "AI-assisted styling on top of SketchUp geometry produces polished concept images with a specific atmospheric register - useful for brand pitches and leasing dossiers where the Enscape render needs a more curated look.",
                 },
                 {
                   heading: "Leasing presentation output",
