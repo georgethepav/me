@@ -279,6 +279,17 @@ export default function URWPage() {
       {/* ------------------------------------------------------------------ */}
       <section className="px-6 py-24 border-t border-zinc-800">
         <div className="max-w-6xl mx-auto">
+
+          {/* SketchUp concept image */}
+          <div className="mb-16 rounded-2xl overflow-hidden">
+            <img
+              src="/sketchup-airport-concourse.png"
+              alt="Airport concourse retail concept - SketchUp Pro 2023"
+              className="w-full object-cover"
+              style={{ maxHeight: "480px", objectPosition: "center 30%" }}
+            />
+          </div>
+
           <div className="grid md:grid-cols-2 gap-16 items-start">
             <div>
               <p className="text-xs font-semibold tracking-widest text-zinc-500 uppercase mb-4">
