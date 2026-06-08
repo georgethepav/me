@@ -1,5 +1,46 @@
 [
   {
+    "title": "SketchUp to Leasing Deck in 20 Minutes: AI-Assisted Retail Concept Visualisation",
+    "slug": "sketchup-to-leasing-deck-ai-assisted-retail-concept-visualisation",
+    "description": "How I connected SketchUp to an AI rendering pipeline to produce leasing-quality retail concept visuals and presentation materials rapidly, without a dedicated visualiser. A practical account of what the workflow looks like, what it produces, and why speed matters in a leasing-driven environment.",
+    "location": "",
+    "tags": [
+      "SketchUp",
+      " AI visualisation",
+      " retail design",
+      " leasing presentations",
+      " concept visuals",
+      " 3D modelling",
+      " SketchUp MCP",
+      " rapid prototyping",
+      " design technology",
+      " BrookerFlynn Architects",
+      " airport retail",
+      " landlord presentations"
+    ],
+    "images": [
+      "https://res.cloudinary.com/dgeaojy0i/image/upload/v1777405394/projects/whsmith-heathrow-terminal-5-one-stop-shop-inmotion/edlyt88ygmztzz2bbtsk.jpg"
+    ],
+    "content": [
+      "There is a particular moment in retail design where a concept needs to become visible before it is designed. A leasing team wants to show a potential brand what a unit could look like. A landlord wants to see whether a proposed tenant fits the centre vision. A client wants to stress-test a layout before committing to a detailed design programme. In all three cases, the request is the same: show me something. Show me something now.",
+      "The traditional answer to that request is to commission a visualiser, wait three to five days, review, iterate, wait again. On a fast-moving leasing pipeline, that timeline is a problem. By the time the image arrives, the conversation has moved on.",
+      "I built a different answer.",
+      "The workflow",
+      "I use SketchUp as my primary tool for early-stage spatial modelling. It is fast, intuitive, and produces geometry that is immediately useful for both design development and visual communication. A unit layout, a facade study, a massing proposal - each of these takes minutes to build in SketchUp rather than hours in a full BIM environment. That speed is the point. The model does not need to be construction-ready. It needs to be true enough to generate a useful visual.",
+      "From the SketchUp model, I pass geometry and context into an AI rendering pipeline using the SketchUp MCP - a direct connection between the SketchUp environment and an AI model that understands spatial instruction. I can describe the visual outcome I want in natural language: the materials, the lighting mood, the brand register, the terminal context. The AI interprets the geometry and the instruction together and returns a rendered image.",
+      "The whole process, from opening SketchUp to a leasing-quality render, runs in under twenty minutes for a straightforward scheme. For a more complex multi-unit proposal, an hour. That is fast enough to produce visuals in a morning and present them in the afternoon.",
+      "What it produces",
+      "The output is not a photorealistic construction visual. It is something more useful for its purpose - a spatially accurate, atmospherically convincing concept image that communicates how a space will feel. The kind of image that works in a leasing deck, in a brand pitch, in a landlord presentation.",
+      "Because I control the style inputs, I can align the render to the visual language a landlord or brand expects. A Westfield-tier centre wants a premium, aspirational register. An airport departure lounge wants a clean, high-contrast presentation against a specific terminal context. The AI pipeline handles the difference between those without requiring a separate briefing process for each.",
+      "Why this matters in a leasing environment",
+      "Leasing teams move fast. The window between a brand expressing interest and that interest cooling is short. Every day a space is not occupied is a day of lost income for the landlord. The design output that supports leasing - the visuals, the dossiers, the concept presentations - needs to match that pace.",
+      "The traditional model, where creative visualisation is outsourced and returned on a multi-day turnaround, does not match that pace. An in-house pipeline that produces presentation-quality visuals on the same day as a concept is developed does.",
+      "I built this workflow because the projects I have been delivering at BrookerFlynn Architects have made it clear that speed of creative output is as important as quality of creative output. The two are not in tension here. The AI pipeline produces results that are good enough to put in front of a leasing team or a landlord, quickly enough to be useful in the moment they are needed.",
+      "Technical notes",
+      "The pipeline runs on SketchUp for massing and spatial layout, connected via the SketchUp MCP to an AI model for render generation. Style and material inputs are given in natural language. Output is a high-resolution image suitable for presentation use. Revit remains the tool of choice for all detailed design and technical delivery once a concept moves forward - the two tools complement each other across the design stages rather than competing."
+    ]
+  },
+  {
     "title": "How I Built a Custom Fee Proposal Tool for Our Architecture Practice Using AI — And What It's Changed",
     "slug": "how-i-built-a-custom-fee-proposal-tool-for-our-architecture-practice-using-ai-and-what-it-s-changed",
     "description": "A practical account of building a bespoke project intake and fee proposal automation tool for BrookerFlynn Architects using Claude AI — covering the brief, the build, and what it means for small practice efficiency.",

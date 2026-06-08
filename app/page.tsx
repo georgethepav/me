@@ -37,16 +37,17 @@ export default function Home() {
           <div className="max-w-2xl">
 
             <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6 text-white">
-              Designing Expertly.<br />
-              Building Systems.<br />
+              Design-led.<br />
+              Retail specialist.<br />
               <span className="bg-gradient-to-r from-zinc-200 to-zinc-500 bg-clip-text text-transparent">
-                Thinking Differently.
+                Systems sharp.
               </span>
             </h1>
 
             <p className="text-zinc-300 text-lg mb-10 leading-relaxed">
-              Architectural technologist combining design expertise, BIM delivery
-              and intelligent workflow systems to deliver better, faster outcomes.
+              Architectural technologist with 18+ years delivering complex retail fit-outs
+              across airports, high streets and major destinations - with the design craft,
+              BIM delivery and intelligent workflow tools to match.
             </p>
 
             <a
@@ -69,23 +70,30 @@ export default function Home() {
           <div>
             <p className="text-xs font-semibold tracking-widest text-zinc-500 uppercase mb-4">About</p>
             <h2 className="text-3xl font-semibold mb-6 leading-snug">
-              18+ Years of Architecture &amp; Construction experience, over a decade of building systems.
+              18+ years of retail design. Airports, high streets and destinations across the UK, Europe and the Middle East.
             </h2>
           </div>
 
           <div className="space-y-5 text-zinc-300 leading-relaxed text-[15px]">
             <p>
-              I&apos;m an Architectural Technologist with over 18 years&apos; experience in construction and
-              delivering complex commercial retail projects across the UK, Europe and the Middle East.
-              I lead a small studio team at BrookerFlynn Architects, specialising in travel &amp; airport
-              retail fit-out clients and their associated brands. My day-to-day spans
-              detailed Revit-based BIM design, UK building regulations and landlord approvals, and
+              I&apos;m an Architectural Technologist with over 18 years&apos; experience delivering complex
+              commercial retail fit-outs across the UK, Europe and the Middle East. I lead a small
+              studio team at BrookerFlynn Architects, specialising in travel and airport retail
+              for clients including WHSmith, InMotion and Pandora. My day-to-day spans detailed
+              Revit and SketchUp-based design, UK building regulations, landlord approvals and
               coordinating with in-country technical architects on international projects.
             </p>
             <p>
-              Alongside my work at Brookerflynn Architects, I build the systems, tools and automations that
-              make design studios run faster and smarter, from AI-powered fee proposal tools to
-              end-to-end drawing issue workflows. I&apos;m also the founder of{" "}
+              I have delivered compliant fit-out designs against the landlord design guidelines
+              of Westfield, JLL, British Land, intu, Trafford Centre, Meadowhall and multiple
+              UK and European airports. That depth of landlord-side experience - understanding
+              what a review process requires, what a compliant submission looks like, and how to
+              guide a design through approval - runs through everything I do.
+            </p>
+            <p>
+              Alongside practice, I build the systems and AI tools that make design studios run
+              faster - from automated drawing issue workflows to AI-assisted concept visualisation
+              using SketchUp and Revit. I&apos;m also the founder of{" "}
               <a
                 href="https://urbanbrief.co.uk"
                 target="_blank"
@@ -94,8 +102,7 @@ export default function Home() {
               >
                 Urban Brief
               </a>
-              , a data-driven property intelligence platform, and I&apos;m developing further ventures at
-              the intersection of architecture, technology and passive income.
+              , a data-driven property intelligence platform.
             </p>
             <p className="text-zinc-500 text-sm">
               Based in Nottingham, UK.
@@ -148,15 +155,11 @@ export default function Home() {
       </section>
 
       {/* -- OTHER VENTURES ---------------------------------------------- */}
-      <section id="ventures" className="px-6 pb-24 max-w-6xl mx-auto">
+      <section id="ventures" className="px-6 pb-20 max-w-6xl mx-auto">
 
-        <h2 className="text-3xl font-semibold mb-4">
-          Other Ventures
+        <h2 className="text-xl font-semibold text-zinc-400 mb-8">
+          Other ventures
         </h2>
-
-        <p className="text-zinc-400 max-w-3xl mb-12">
-          Independent ventures and tools exploring new ways to create value within the built environment.
-        </p>
 
         <div className="grid md:grid-cols-2 gap-6">
 
@@ -224,7 +227,7 @@ export default function Home() {
               </h2>
               <p className="text-zinc-400 leading-relaxed mb-8">
                 Whether you need architectural design and BIM delivery, a systems thinker to untangle
-                your practice workflows, or someone to build the AI tools your team keeps asking for &mdash;
+                your practice workflows, or someone to build the AI tools your team keeps asking for,
                 I&apos;m available for the right projects.
               </p>
               <a
@@ -239,8 +242,12 @@ export default function Home() {
 
               {[
                 {
-                  title: "Architectural Design & BIM Delivery",
-                  desc: "Revit-based BIM design, UK building regulations, landlord approvals and international project coordination.",
+                  title: "Retail Design, BIM and SketchUp Delivery",
+                  desc: "Revit and SketchUp-based design, concept visualisation, UK building regulations, landlord approvals and international project coordination.",
+                },
+                {
+                  title: "AI-Assisted Visualisation",
+                  desc: "Rapid concept visuals and leasing presentation materials using an AI-assisted SketchUp pipeline - leasing-quality output without a dedicated visualiser.",
                 },
                 {
                   title: "AI Workflow Consultancy",
@@ -248,11 +255,7 @@ export default function Home() {
                 },
                 {
                   title: "Systems Thinking for Practices",
-                  desc: "End-to-end workflow design \u2014 from fee proposals and drawing issue to project tracking and reporting.",
-                },
-                {
-                  title: "Digital Product Development",
-                  desc: "Turning technical domain knowledge into scalable digital products and platforms.",
+                  desc: "End-to-end workflow design - from fee proposals and drawing issue to project tracking and reporting.",
                 },
               ].map((item) => (
                 <div key={item.title} className="bg-zinc-900 border border-zinc-800 rounded-xl p-5">
