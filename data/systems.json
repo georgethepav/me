@@ -109,7 +109,7 @@
       "architectural technology",
       "BrookerFlynn Architects"
     ],
-    "images": [],
+    "images": ["/daily-control-diagram.png"],
     "content": [
       "This piece follows on from an earlier one about building a custom fee proposal tool for the practice. That one was about the tool. This one is about what happened when I stopped driving the tool by hand and built something to drive it for me.",
       "The fee-proposal tool solved a real problem. New project comes in, you fill in a structured form, it writes to the register, calculates the fee across our tiered matrix, renders a branded proposal and drops it into Outlook ready to send. An afternoon of admin became a few minutes. I was pleased with it.",
