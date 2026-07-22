@@ -13,13 +13,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "George Billam — Architectural Technologist & Systems Builder",
+  title: "George Billam - Architectural Technologist & Claude Certified Associate",
   description:
-    "George Billam is an architectural technologist and systems thinker with 18+ years delivering complex retail projects across airports and major destinations — and building the digital tools that make practices run better.",
+    "George Billam is an architectural technologist and Claude Certified Associate with 18+ years delivering complex retail projects across airports and major destinations - and building the AI tools that make practices run better.",
   openGraph: {
-    title: "George Billam — Architectural Technologist & Systems Builder",
+    title: "George Billam - Architectural Technologist & Claude Certified Associate",
     description:
-      "George Billam is an architectural technologist and systems thinker with 18+ years delivering complex retail projects across airports and major destinations — and building the digital tools that make practices run better.",
+      "George Billam is an architectural technologist and Claude Certified Associate with 18+ years delivering complex retail projects across airports and major destinations - and building the AI tools that make practices run better.",
     url: "https://georgebillam.com",
     siteName: "George Billam",
     images: [
@@ -27,16 +27,16 @@ export const metadata: Metadata = {
         url: "https://georgebillam.com/GB.png",
         width: 1200,
         height: 630,
-        alt: "George Billam — Architectural Technologist & Systems Builder",
+        alt: "George Billam - Architectural Technologist & Claude Certified Associate",
       },
     ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "George Billam — Architectural Technologist & Systems Builder",
+    title: "George Billam - Architectural Technologist & Claude Certified Associate",
     description:
-      "George Billam is an architectural technologist and systems thinker with 18+ years delivering complex retail projects across airports and major destinations — and building the digital tools that make practices run better.",
+      "George Billam is an architectural technologist and Claude Certified Associate with 18+ years delivering complex retail projects across airports and major destinations - and building the AI tools that make practices run better.",
     images: ["https://georgebillam.com/GB.png"],
   },
 };

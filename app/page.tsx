@@ -47,7 +47,7 @@ export default function Home() {
             <p className="text-zinc-300 text-lg mb-10 leading-relaxed">
               Architectural technologist with 18+ years delivering complex retail fit-outs
               across airports, high streets and major destinations - with the design craft,
-              BIM delivery and intelligent workflow tools to match.
+              BIM delivery and intelligent workflow tools to match, and a Claude Certified Associate.
             </p>
 
             <a
@@ -93,7 +93,16 @@ export default function Home() {
             <p>
               Alongside practice, I build the systems and AI tools that make design studios run
               faster - from automated drawing issue workflows to AI-assisted concept visualisation
-              using SketchUp and Revit. I&apos;m also the founder of{" "}
+              using SketchUp and Revit. I&apos;m an Anthropic Claude Certified Associate, and{" "}
+              <a
+                href="https://grivoblinx.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white underline underline-offset-2 hover:text-zinc-300 transition"
+              >
+                GrivoBlinx
+              </a>
+              {" "}is a Member of the Claude Partner Network. I&apos;m also the founder of{" "}
               <a
                 href="https://urbanbrief.co.uk"
                 target="_blank"
@@ -152,6 +161,68 @@ export default function Home() {
           ))}
         </div>
 
+      </section>
+
+      {/* -- CREDENTIALS ------------------------------------------------ */}
+      <section id="credentials" className="px-6 pb-20 max-w-6xl mx-auto">
+        <div className="border-t border-zinc-800 pt-20">
+
+          <div className="flex flex-col md:flex-row gap-12 md:gap-20 items-center">
+
+            {/* BADGE */}
+            <div className="flex-shrink-0 flex justify-center">
+              <a
+                href="https://www.credly.com/badges/2dbaa34d-90ca-4b3c-8953-997de57e5b66/public_url"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://images.credly.com/size/340x340/images/a6387cbd-5ac1-4894-833a-da2cbc28587e/blob"
+                  alt="Claude Certified Associate badge, verified on Credly"
+                  className="w-40 h-40 md:w-48 md:h-48"
+                  style={{ filter: "drop-shadow(0 0 28px rgba(251,191,36,0.4))" }}
+                />
+              </a>
+            </div>
+
+            {/* TEXT */}
+            <div>
+              <p className="text-xs font-semibold tracking-widest text-zinc-500 uppercase mb-8">Credentials</p>
+
+              <div className="space-y-7">
+
+                <div>
+                  <p className="text-zinc-400 text-sm mb-1">GrivoBlinx is a Member of Anthropic&apos;s</p>
+                  <a
+                    href="https://grivoblinx.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-2xl md:text-3xl font-bold text-amber-400 hover:text-amber-300 transition leading-tight"
+                  >
+                    Claude Partner Network.
+                  </a>
+                </div>
+
+                <div>
+                  <p className="text-zinc-400 text-sm mb-1">George Billam is an Anthropic-accredited</p>
+                  <a
+                    href="https://www.credly.com/badges/2dbaa34d-90ca-4b3c-8953-997de57e5b66/public_url"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-2xl md:text-3xl font-bold text-amber-400 hover:text-amber-300 transition leading-tight"
+                  >
+                    Claude Certified Associate.
+                  </a>
+                </div>
+
+              </div>
+
+              <p className="text-zinc-500 text-sm mt-8">Proctored exam, Pearson VUE. Verified on Credly.</p>
+            </div>
+
+          </div>
+
+        </div>
       </section>
 
       {/* -- OTHER VENTURES ---------------------------------------------- */}
@@ -251,7 +322,7 @@ export default function Home() {
                 },
                 {
                   title: "AI Workflow Consultancy",
-                  desc: "Designing and building AI-powered tools and automations tailored to how your practice actually operates.",
+                  desc: "Designing and building AI-powered tools and automations tailored to how your practice actually operates - delivered as an Anthropic Claude Certified Associate.",
                 },
                 {
                   title: "Systems Thinking for Practices",
