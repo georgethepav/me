@@ -36,20 +36,20 @@ export default function Home() {
               AI and design technology leadership
             </p>
 
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6 text-white">
-              Leading AI adoption in<br />
+            <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6 text-white">
+              Design-led.<br />
+              Retail specialist.<br />
               <span className="bg-gradient-to-r from-zinc-200 to-zinc-500 bg-clip-text text-transparent">
-                architecture practices.
+                Systems sharp.
               </span>
             </h1>
 
             <p className="text-zinc-300 text-lg mb-10 leading-relaxed max-w-2xl mx-auto">
-              18+ years in architecture and construction design. Leads AI policy,
-              governance, training and practice-specific agents on live projects.
-              Anthropic Claude Certified Associate.
+              Architectural technologist with 18+ years delivering complex retail fit-outs across
+              airports, high streets and major destinations - and building the AI tools that help
+              design practices run better. Anthropic Claude Certified Associate.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/George_Billam_CV.pdf"
                 target="_blank"
@@ -59,12 +59,27 @@ export default function Home() {
                 Download CV
               </a>
               <a
+                href="#work-with-me"
+                className="inline-block bg-white text-black font-semibold px-8 py-3 rounded-full hover:bg-zinc-200 transition text-sm tracking-wide"
+              >
+                Work With Me
+              </a>
+              <a
                 href="#contact"
                 className="inline-block border border-zinc-500 text-white font-semibold px-8 py-3 rounded-full hover:border-white transition text-sm tracking-wide"
               >
                 Get in touch
               </a>
+              <a
+                href="/George_Billam_CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block border border-zinc-700 text-zinc-200 font-semibold px-8 py-3 rounded-full hover:border-zinc-500 transition text-sm tracking-wide"
+              >
+                Download CV
+              </a>
             </div>
+
 
           </div>
         </div>
@@ -184,7 +199,7 @@ export default function Home() {
 
       </section>
 
-      {/* -- CREDENTIALS ------------------------------------------------- */}
+      {/* -- CREDENTIALS ------------------------------------------------ */}
       <section id="credentials" className="px-6 pb-20 max-w-6xl mx-auto">
         <div className="border-t border-zinc-800 pt-20">
 
@@ -220,6 +235,171 @@ export default function Home() {
                   >
                     Claude Partner Network.
                   </a>
+                </div>
+
+                <div>
+                  <p className="text-zinc-400 text-sm mb-1">George Billam is an Anthropic-accredited</p>
+                  <a
+                    href="https://www.credly.com/badges/2dbaa34d-90ca-4b3c-8953-997de57e5b66/public_url"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-2xl md:text-3xl font-bold text-amber-400 hover:text-amber-300 transition leading-tight"
+                  >
+                    Claude Certified Associate.
+                  </a>
+                </div>
+
+              </div>
+
+              <p className="text-zinc-500 text-sm mt-8">Proctored exam, Pearson VUE. Verified on Credly.</p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      {/* -- OTHER VENTURES ---------------------------------------------- */}
+      <section id="ventures" className="px-6 pb-20 max-w-6xl mx-auto">
+
+        <h2 className="text-xl font-semibold text-zinc-400 mb-8">
+          Other ventures
+        </h2>
+
+        <div className="grid md:grid-cols-2 gap-6">
+
+          <a
+            href="https://urbanbrief.co.uk"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-zinc-900 rounded-xl p-6 hover:scale-[1.03] transition flex flex-col items-center text-center group"
+          >
+            <div className="w-full flex items-center justify-center mb-5"
+              style={{ height: "120px" }}>
+              <img
+                src="/logos/urbanbrief.png"
+                alt="Urban Brief"
+                className="max-h-full max-w-full object-contain rounded-xl"
+                style={{ filter: "brightness(1.05)" }}
+              />
+            </div>
+            <p className="text-sm text-zinc-400 group-hover:text-zinc-300 transition leading-relaxed">
+              Urban Brief is a data-driven property intelligence platform offering renovation and
+              extension cost calculators, AI-generated reports and practical guidance for homeowners,
+              developers and investors making smarter property decisions in the UK.
+            </p>
+          </a>
+
+          <a
+            href="https://grivoblinx.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-zinc-900 rounded-xl p-6 hover:scale-[1.03] transition flex flex-col items-center text-center group"
+          >
+            <div className="w-full flex items-center justify-center mb-5"
+              style={{ height: "120px" }}>
+              <img
+                src="/logos/grivoblinx.png"
+                alt="GrivoBlinx"
+                className="max-h-full max-w-full object-contain"
+                style={{ filter: "brightness(1.05)" }}
+              />
+            </div>
+
+            <p className="text-base font-semibold text-zinc-100 mb-2">GrivoBlinx</p>
+            <p className="text-sm text-zinc-500">
+              Bespoke AI tools and workflow automation for design and construction practices.
+            </p>
+
+          </a>
+
+        </div>
+
+      </section>
+
+        </div>
+
+      </section>
+
+      {/* -- CREDENTIALS ------------------------------------------------- */}
+      <section id="credentials" className="px-6 pb-20 max-w-6xl mx-auto">
+        <div className="border-t border-zinc-800 pt-20">
+
+          <div className="flex flex-col md:flex-row gap-12 md:gap-20 items-center">
+
+            <div className="flex-shrink-0 flex justify-center">
+              <a
+                href="https://www.credly.com/badges/2dbaa34d-90ca-4b3c-8953-997de57e5b66/public_url"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://images.credly.com/size/340x340/images/a6387cbd-5ac1-4894-833a-da2cbc28587e/blob"
+                  alt="Claude Certified Associate badge, verified on Credly"
+                  className="w-40 h-40 md:w-48 md:h-48"
+                  style={{ filter: "drop-shadow(0 0 28px rgba(251,191,36,0.4))" }}
+                />
+              </a>
+            </div>
+
+            <div>
+              <p className="text-xs font-semibold tracking-widest text-zinc-500 uppercase mb-4">Work With Me</p>
+              <h2 className="text-4xl font-bold leading-tight mb-6">
+                Let&apos;s build something that actually works.
+              </h2>
+              <p className="text-zinc-400 leading-relaxed mb-8">
+                Whether you need architectural design and BIM delivery, a systems thinker to untangle
+                your practice workflows, or someone to build the AI tools your team keeps asking for,
+                I&apos;m available for the right projects.
+              </p>
+
+              <a
+                href="https://www.credly.com/badges/2dbaa34d-90ca-4b3c-8953-997de57e5b66/public_url"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://images.credly.com/size/340x340/images/a6387cbd-5ac1-4894-833a-da2cbc28587e/blob"
+                  alt="Claude Certified Associate badge, verified on Credly"
+                  className="w-40 h-40 md:w-48 md:h-48"
+                  style={{ filter: "drop-shadow(0 0 28px rgba(251,191,36,0.4))" }}
+                />
+              </a>
+            </div>
+
+            <div>
+              <p className="text-xs font-semibold tracking-widest text-zinc-500 uppercase mb-8">Credentials</p>
+
+              <div className="space-y-7">
+
+                <div>
+                  <p className="text-zinc-400 text-sm mb-1">GrivoBlinx is a Member of Anthropic&apos;s</p>
+                  <a
+                    href="https://grivoblinx.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-2xl md:text-3xl font-bold text-amber-400 hover:text-amber-300 transition leading-tight"
+                  >
+                    Claude Partner Network.
+                  </a>
+                </div>
+
+                <div>
+                  <p className="text-zinc-400 text-sm mb-1">George Billam is an Anthropic-accredited</p>
+                  <a
+                    href="https://www.credly.com/badges/2dbaa34d-90ca-4b3c-8953-997de57e5b66/public_url"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-2xl md:text-3xl font-bold text-amber-400 hover:text-amber-300 transition leading-tight"
+                  >
+                    Claude Certified Associate.
+                  </a>
+                </div>
+
+              </div>
+
+              <p className="text-zinc-500 text-sm mt-8">Proctored exam, Pearson VUE. Verified on Credly.</p>
+
                 </div>
 
                 <div>
