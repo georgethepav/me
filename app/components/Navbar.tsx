@@ -15,10 +15,10 @@ export default function Navbar() {
 
         {/* Desktop links */}
         <div className="hidden md:flex gap-6 text-sm text-zinc-400">
-          <a href="#ai-leadership" className="hover:text-white transition">AI in Practice</a>
-          <a href="#systems" className="hover:text-white transition">Agents &amp; Tools</a>
           <a href="#projects" className="hover:text-white transition">Projects</a>
-          <a href="#credentials" className="hover:text-white transition">Credentials</a>
+          <a href="#systems" className="hover:text-white transition">Digital Systems</a>
+          <a href="#ventures" className="hover:text-white transition">Other Ventures</a>
+          <a href="#work-with-me" className="hover:text-white transition">Work With Me</a>
           <a
             href="#contact"
             className="text-white border border-zinc-600 rounded-full px-4 py-1 hover:bg-white hover:text-black transition"
@@ -49,10 +49,10 @@ export default function Navbar() {
       {/* Mobile dropdown */}
       {open && (
         <div className="md:hidden border-t border-zinc-800 bg-black/95 px-6 py-4 flex flex-col gap-4 text-sm text-zinc-400">
-          <a href="#ai-leadership" onClick={() => setOpen(false)} className="hover:text-white transition">AI in Practice</a>
-          <a href="#systems" onClick={() => setOpen(false)} className="hover:text-white transition">Agents &amp; Tools</a>
           <a href="#projects" onClick={() => setOpen(false)} className="hover:text-white transition">Projects</a>
-          <a href="#credentials" onClick={() => setOpen(false)} className="hover:text-white transition">Credentials</a>
+          <a href="#systems" onClick={() => setOpen(false)} className="hover:text-white transition">Digital Systems</a>
+          <a href="#ventures" onClick={() => setOpen(false)} className="hover:text-white transition">Other Ventures</a>
+          <a href="#work-with-me" onClick={() => setOpen(false)} className="hover:text-white transition">Work With Me</a>
           <a
             href="#contact"
             onClick={() => setOpen(false)}

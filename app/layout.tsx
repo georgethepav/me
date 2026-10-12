@@ -13,13 +13,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "George Billam | AI and Design Technology Leader, Architecture",
+  title: "George Billam — Architectural Technologist & Systems Builder",
   description:
-    "George Billam leads AI adoption, governance and design technology in architecture. 18+ years in practice, 150+ retail fit-outs, Anthropic Claude Certified Associate. Based in Nottingham, UK.",
+    "George Billam is an architectural technologist and systems thinker with 18+ years delivering complex retail projects across airports and major destinations — and building the digital tools that make practices run better.",
   openGraph: {
-    title: "George Billam | AI and Design Technology Leader, Architecture",
+    title: "George Billam — Architectural Technologist & Systems Builder",
     description:
-      "George Billam leads AI adoption, governance and design technology in architecture. 18+ years in practice, 150+ retail fit-outs, Anthropic Claude Certified Associate. Based in Nottingham, UK.",
+      "George Billam is an architectural technologist and systems thinker with 18+ years delivering complex retail projects across airports and major destinations — and building the digital tools that make practices run better.",
     url: "https://georgebillam.com",
     siteName: "George Billam",
     images: [
@@ -27,16 +27,16 @@ export const metadata: Metadata = {
         url: "https://georgebillam.com/GB.png",
         width: 1200,
         height: 630,
-        alt: "George Billam | AI and Design Technology Leader, Architecture",
+        alt: "George Billam — Architectural Technologist & Systems Builder",
       },
     ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "George Billam | AI and Design Technology Leader, Architecture",
+    title: "George Billam — Architectural Technologist & Systems Builder",
     description:
-      "George Billam leads AI adoption, governance and design technology in architecture. 18+ years in practice, 150+ retail fit-outs, Anthropic Claude Certified Associate. Based in Nottingham, UK.",
+      "George Billam is an architectural technologist and systems thinker with 18+ years delivering complex retail projects across airports and major destinations — and building the digital tools that make practices run better.",
     images: ["https://georgebillam.com/GB.png"],
   },
 };
