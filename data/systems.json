@@ -1,5 +1,28 @@
 [
   {
+    "title": "Architectural Visuals via Bespoke Stack",
+    "slug": "ai-render-pipeline-claude-cgi",
+    "description": "A bespoke pipeline that takes a Revit model via MCP, generates a written brief using Claude, then produces photorealistic CGI via fal.ai FLUX. Director-approved output without a dedicated visualiser in the loop.",
+    "location": "",
+    "tags": [
+      "AI visualisation",
+      "fal.ai",
+      "FLUX",
+      "Revit MCP",
+      "CGI pipeline",
+      "retail design",
+      "BrookerFlynn Architects"
+    ],
+    "images": [
+      "/card-render-pipeline.jpg"
+    ],
+    "content": [
+      "Enscape produces good real-time renders but needs a fully dressed model and a skilled operator to get shots that work for a client or leasing team. It is also slow to iterate: change a fixture, re-render, wait.",
+      "This pipeline replaces that step. Claude reads the Revit model via MCP, extracts the spatial and material information, and writes a detailed visual brief. That brief goes directly into fal.ai's FLUX model to produce photorealistic CGI.",
+      "The outputs shown here ran through director review and were approved for client use. The comparison page in the summary shows the Revit model state alongside the Claude CGI output. The gap is significant, and the round-trip time was a fraction of the conventional route."
+    ]
+  },
+  {
     "title": "SketchUp, Enscape and AI: A Retail Visualisation Pipeline Built for Leasing Speed",
     "slug": "sketchup-to-leasing-deck-ai-assisted-retail-concept-visualisation",
     "description": "How I use SketchUp, Enscape and an AI pipeline together to produce leasing-quality retail concept visuals and presentation materials at pace - two outputs from the same model, covering both the persuasive sketchy concept view and the photorealistic walkthrough, without a dedicated visualiser in the loop.",
@@ -168,29 +191,6 @@
       "A retail unit crossing a fire compartment boundary needs a smoke control strategy before Building Control will accept the package. The traditional route: read the report, open Revit, model the zones manually, annotate, issue. An afternoon, at minimum.",
       "This session used a Revit MCP integration to work through the problem as a conversation. The model read the existing Revit file, understood the compartment boundary conditions, and produced the annotated strategy drawings directly. The session summary shows the prompt chain, the decisions made at each stage, and the output views.",
       "The output was a complete, issue-ready drawing set. The time from brief to drawings was a fraction of the manual equivalent."
-    ]
-  },
-  {
-    "title": "Replacing the Visualiser: Claude CGI from a Revit Model",
-    "slug": "ai-render-pipeline-claude-cgi",
-    "description": "A pipeline that takes a Revit model via MCP, generates a written brief using Claude, then produces photorealistic CGI via fal.ai FLUX. Director-approved output without a dedicated visualiser in the loop.",
-    "location": "",
-    "tags": [
-      "AI visualisation",
-      "fal.ai",
-      "FLUX",
-      "Revit MCP",
-      "CGI pipeline",
-      "retail design",
-      "BrookerFlynn Architects"
-    ],
-    "images": [
-      "/card-render-pipeline.jpg"
-    ],
-    "content": [
-      "Enscape produces good real-time renders but needs a fully dressed model and a skilled operator to get shots that work for a client or leasing team. It is also slow to iterate: change a fixture, re-render, wait.",
-      "This pipeline replaces that step. Claude reads the Revit model via MCP, extracts the spatial and material information, and writes a detailed visual brief. That brief goes directly into fal.ai's FLUX model to produce photorealistic CGI.",
-      "The outputs shown here ran through director review and were approved for client use. The comparison page in the summary shows the Revit model state alongside the Claude CGI output. The gap is significant, and the round-trip time was a fraction of the conventional route."
     ]
   },
   {
