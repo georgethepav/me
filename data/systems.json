@@ -109,7 +109,9 @@
       "architectural technology",
       "BrookerFlynn Architects"
     ],
-    "images": ["/daily-control-diagram.png"],
+    "images": [
+      "/daily-control-diagram.png"
+    ],
     "content": [
       "This piece follows on from an earlier one about building a custom fee proposal tool for the practice. That one was about the tool. This one is about what happened when I stopped driving the tool by hand and built something to drive it for me.",
       "The fee-proposal tool solved a real problem. New project comes in, you fill in a structured form, it writes to the register, calculates the fee across our tiered matrix, renders a branded proposal and drops it into Outlook ready to send. An afternoon of admin became a few minutes. I was pleased with it.",
@@ -147,11 +149,131 @@
     ]
   },
   {
+    "title": "Revit MCP: Fire Strategy Drawings from a Prompt",
+    "slug": "revit-mcp-fire-strategy-drawings",
+    "description": "A live Revit MCP session producing a complete smoke control strategy drawing set for a retail unit crossing a fire zone boundary, directly from a brief. No manual Revit input after setup.",
+    "location": "",
+    "tags": [
+      "Revit MCP",
+      "fire strategy",
+      "smoke control",
+      "drawing production",
+      "AI architecture",
+      "BrookerFlynn Architects"
+    ],
+    "images": [
+      "/card-fire-strategy.jpg"
+    ],
+    "content": [
+      "A retail unit crossing a fire compartment boundary needs a smoke control strategy before Building Control will accept the package. The traditional route: read the report, open Revit, model the zones manually, annotate, issue. An afternoon, at minimum.",
+      "This session used a Revit MCP integration to work through the problem as a conversation. The model read the existing Revit file, understood the compartment boundary conditions, and produced the annotated strategy drawings directly. The session summary shows the prompt chain, the decisions made at each stage, and the output views.",
+      "The output was a complete, issue-ready drawing set. The time from brief to drawings was a fraction of the manual equivalent."
+    ]
+  },
+  {
+    "title": "Replacing the Visualiser: Claude CGI from a Revit Model",
+    "slug": "ai-render-pipeline-claude-cgi",
+    "description": "A pipeline that takes a Revit model via MCP, generates a written brief using Claude, then produces photorealistic CGI via fal.ai FLUX. Director-approved output without a dedicated visualiser in the loop.",
+    "location": "",
+    "tags": [
+      "AI visualisation",
+      "fal.ai",
+      "FLUX",
+      "Revit MCP",
+      "CGI pipeline",
+      "retail design",
+      "BrookerFlynn Architects"
+    ],
+    "images": [
+      "/card-render-pipeline.jpg"
+    ],
+    "content": [
+      "Enscape produces good real-time renders but needs a fully dressed model and a skilled operator to get shots that work for a client or leasing team. It is also slow to iterate: change a fixture, re-render, wait.",
+      "This pipeline replaces that step. Claude reads the Revit model via MCP, extracts the spatial and material information, and writes a detailed visual brief. That brief goes directly into fal.ai's FLUX model to produce photorealistic CGI.",
+      "The outputs shown here ran through director review and were approved for client use. The comparison page in the summary shows the Revit model state alongside the Claude CGI output. The gap is significant, and the round-trip time was a fraction of the conventional route."
+    ]
+  },
+  {
+    "title": "Furniture Mapping: 95 Families, 366 Instances, Automated",
+    "slug": "furniture-mapping-retail-model-store",
+    "description": "First build of the map-furniture-families skill: reads a DWG layout, maps each block to a BFA Revit family, places all instances with correct orientation. A week of manual work completed in a single session.",
+    "location": "",
+    "tags": [
+      "Revit",
+      "furniture mapping",
+      "DWG",
+      "automation",
+      "BrookerFlynn Architects",
+      "retail fit-out"
+    ],
+    "images": [
+      "/card-furniture-mapping.jpg"
+    ],
+    "content": [
+      "Every retail fit-out involves placing furniture families in Revit. The supplier sends a DWG. Someone opens it, identifies each block type, finds the matching Revit family, places it, rotates it, moves on. Multiply by hundreds of instances across a typical store and you have most of a day gone, with a high error rate from fatigue.",
+      "This was the first live run of a skill I built to automate the entire step. It reads the DWG, maps each block type to the correct BFA Revit family, and places all instances with the right position and orientation in a single pass.",
+      "First run result: 95 distinct families, 366 placed instances. The Revit views shown here are the output. Manual work avoided: the better part of a working week."
+    ]
+  },
+  {
+    "title": "Furniture Mapping: Second Run, Two-Pass Process",
+    "slug": "furniture-mapping-two-pass-run",
+    "description": "Second live run of the map-furniture-families skill, using a two-pass approach: a block geometry pass followed by a coded parameter pass to resolve edge cases and confirm all instances placed correctly.",
+    "location": "",
+    "tags": [
+      "Revit",
+      "furniture mapping",
+      "DWG automation",
+      "two-pass",
+      "BrookerFlynn Architects",
+      "retail fit-out"
+    ],
+    "images": [
+      "/card-furniture-t5.jpg"
+    ],
+    "content": [
+      "The first run of the furniture mapping skill proved the approach. The second run put it under more demanding conditions: a more complex store layout, additional block types, and edge cases the initial build had not encountered.",
+      "The session used a two-pass approach. The first pass reads the DWG geometry to identify and place the majority of families. The second pass uses coded parameters in the DWG to resolve any blocks that did not match on geometry alone.",
+      "The output views show the completed Revit model. Both passes completed within the same session, with no manual Revit input required between them."
+    ]
+  },
+  {
+    "title": "Custom Revit Family via C# API: DDA Accessible Bench",
+    "slug": "dda-bench-revit-family-build",
+    "description": "A compliant 1000x535x740mm accessible bench family built from a DXF GA using the send_code_to_revit C# API. Three-stage process: profile, extrusion, parameter binding. No family editor required.",
+    "location": "",
+    "tags": [
+      "Revit",
+      "C# API",
+      "custom family",
+      "DDA compliance",
+      "accessible design",
+      "BrookerFlynn Architects",
+      "send_code_to_revit"
+    ],
+    "images": [
+      "/card-dda-bench.jpg"
+    ],
+    "content": [
+      "Revit's family editor is capable but slow. Building a compliant accessible bench from a supplied GA drawing the conventional way means opening the editor, tracing profiles, extruding, adding parameters, testing. Thirty minutes minimum, more for anything complex.",
+      "This build used the send_code_to_revit tool to write C# directly against the Revit API from a prompt, working from the DXF GA drawing. The process ran in three stages: profile generation, extrusion, and parameter binding for the key dimensions.",
+      "The finished family is 1000x535x740mm, matches the DDA requirements from the GA, and is parameterised for width and depth variation. The summary shows all three stages alongside the final Revit family in place."
+    ]
+  },
+  {
     "title": "Building Regulations Notes Agent",
     "slug": "building-regulations-notes-agent",
     "description": "A policy-governed AI agent that references Approved Documents A to T to produce annotated Building Regulations notes from within Revit. Cost-tiered model routing and prompt caching keep it fast and economical on high-volume queries.",
     "location": "",
-    "tags": ["Building Regulations", "Approved Documents", "Revit", "AI agent", "MCP", "BIM", "architecture"],
+    "tags": [
+      "Building Regulations",
+      "Approved Documents",
+      "Revit",
+      "AI agent",
+      "MCP",
+      "BIM",
+      "architecture"
+    ],
     "images": [],
     "content": [
       "Building Regulations queries arrive constantly on live projects. The question is always the same: does this design decision comply, and where is that set out? Looking it up manually is reliable but slow. This agent makes it fast without removing the human judgement.",
@@ -165,7 +287,14 @@
     "slug": "finance-po-reconciliation-agent",
     "description": "An AI agent that sweeps purchase order emails, cross-references them against the fee register, flags unmatched items and drafts PO chases. All output lands in Drafts for review before sending.",
     "location": "",
-    "tags": ["finance", "PO reconciliation", "fee register", "email automation", "Microsoft Graph API", "drafts-only"],
+    "tags": [
+      "finance",
+      "PO reconciliation",
+      "fee register",
+      "email automation",
+      "Microsoft Graph API",
+      "drafts-only"
+    ],
     "images": [],
     "content": [
       "Purchase order management in a small practice is time-consuming and error-prone. POs arrive by email, get forwarded, get chased, and occasionally get missed. The gap between fees agreed and POs received is a real financial risk.",
@@ -179,7 +308,15 @@
     "slug": "furniture-family-mapping-agent",
     "description": "An agent that reads client furniture layout DWGs, identifies each unit by category and reference code, and places or updates the corresponding Revit families in the live model.",
     "location": "",
-    "tags": ["Revit", "Dynamo", "furniture families", "DWG", "BIM automation", "retail design", "CAD"],
+    "tags": [
+      "Revit",
+      "Dynamo",
+      "furniture families",
+      "DWG",
+      "BIM automation",
+      "retail design",
+      "CAD"
+    ],
     "images": [],
     "content": [
       "Retail clients supply furniture layouts as DWG files. Translating those into a Revit model with the correct families placed at the correct positions is painstaking work. On a large airport store layout that can take most of a day.",
@@ -193,7 +330,15 @@
     "slug": "revit-mcp-integration",
     "description": "An extended open-source Revit MCP server with a standard mount protocol, session ledgers and a recipe library. Procedures are promoted to reusable skills only after two clean, checked runs.",
     "location": "",
-    "tags": ["Revit", "MCP", "Model Context Protocol", "BIM", "automation", "open source", "AI agent"],
+    "tags": [
+      "Revit",
+      "MCP",
+      "Model Context Protocol",
+      "BIM",
+      "automation",
+      "open source",
+      "AI agent"
+    ],
     "images": [],
     "content": [
       "The Revit MCP server exposes Revit's API to AI agents via the Model Context Protocol. The open-source base gives Claude direct access to model data, view information and element parameters. What it does not give you out of the box is a reliable, governed way to run it on live projects.",
@@ -244,7 +389,7 @@
       "The next iteration will read distribution contact names directly from Revit shared parameters, fully automating the Issued To section. After that, transmittal generation  -  pre-populating a formatted email with the correct recipients, subject line and drawing list ready to send. Further down the line, direct integration with common data environments to trigger the CDE upload from within the Dynamo workflow.",
       "The architecture is generic. The node pipeline is client-agnostic  -  swapping Node 04 produces a different register format for a different client. The same approach could be applied across any practice running Revit with a structured issue process.",
       "Technical Stack",
-      "Revit 2024 · Dynamo 2.19.3 · CPython 3 · openpyxl · HTML · jsPDF · SharePoint / OneDrive · AutoCAD 2018 DWG"
+      "Revit 2024 \u00b7 Dynamo 2.19.3 \u00b7 CPython 3 \u00b7 openpyxl \u00b7 HTML \u00b7 jsPDF \u00b7 SharePoint / OneDrive \u00b7 AutoCAD 2018 DWG"
     ]
   },
   {
