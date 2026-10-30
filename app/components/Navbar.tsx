@@ -17,6 +17,7 @@ export default function Navbar() {
         <div className="hidden md:flex gap-6 text-sm text-zinc-400">
           <a href="#ai-leadership" className="hover:text-white transition">AI in Practice</a>
           <a href="#systems" className="hover:text-white transition">Agents &amp; Tools</a>
+          <a href="#theory" className="hover:text-white transition">Theory</a>
           <a href="#projects" className="hover:text-white transition">Projects</a>
           <a href="#credentials" className="hover:text-white transition">Credentials</a>
           <a
@@ -51,6 +52,7 @@ export default function Navbar() {
         <div className="md:hidden border-t border-zinc-800 bg-black/95 px-6 py-4 flex flex-col gap-4 text-sm text-zinc-400">
           <a href="#ai-leadership" onClick={() => setOpen(false)} className="hover:text-white transition">AI in Practice</a>
           <a href="#systems" onClick={() => setOpen(false)} className="hover:text-white transition">Agents &amp; Tools</a>
+          <a href="#theory" onClick={() => setOpen(false)} className="hover:text-white transition">Theory</a>
           <a href="#projects" onClick={() => setOpen(false)} className="hover:text-white transition">Projects</a>
           <a href="#credentials" onClick={() => setOpen(false)} className="hover:text-white transition">Credentials</a>
           <a

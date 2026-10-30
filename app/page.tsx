@@ -5,9 +5,11 @@ export const dynamic = "force-dynamic";
 import Navbar from "./components/Navbar";
 import ProjectCard from "./components/ProjectCard";
 import SystemCard from "./components/SystemCard";
+import WritingCard from "./components/WritingCard";
 
 import projects from "../data/projects.json";
 import systems from "../data/systems.json";
+import writing from "../data/writing.json";
 
 export default function Home() {
   return (
@@ -158,6 +160,27 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-8">
           {systems.map((system: any) => (
             <SystemCard key={system.slug} system={system} />
+          ))}
+        </div>
+
+      </section>
+
+      {/* -- THEORY AND EXPERIMENTS -------------------------------------- */}
+      <section id="theory" className="px-6 pb-24 max-w-6xl mx-auto">
+
+        <p className="text-xs font-semibold tracking-widest text-zinc-500 uppercase mb-4">Theory and experiments</p>
+        <h2 className="text-3xl font-semibold mb-4">
+          Where architecture and AI are heading
+        </h2>
+
+        <p className="text-zinc-400 max-w-3xl mb-12 leading-relaxed">
+          Two theories developed from practice: what happens to buildings and drawings
+          when AI agents can read and write the model directly.
+        </p>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          {writing.map((piece: any) => (
+            <WritingCard key={piece.slug} piece={piece} />
           ))}
         </div>
 
@@ -378,6 +401,7 @@ export default function Home() {
           <div className="flex gap-6 text-sm text-zinc-500">
             <a href="#ai-leadership" className="hover:text-white transition">AI in Practice</a>
             <a href="#systems" className="hover:text-white transition">Agents &amp; Tools</a>
+            <a href="#theory" className="hover:text-white transition">Theory</a>
             <a href="#projects" className="hover:text-white transition">Projects</a>
             <a href="#contact" className="hover:text-white transition">Contact</a>
           </div>
