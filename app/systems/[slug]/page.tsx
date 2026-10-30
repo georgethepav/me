@@ -108,21 +108,6 @@ export default async function SystemPage({ params }: any) {
           ))}
         </div>
 
-        {/* DOC LINK (theory articles) */}
-        {isTheory && entry.doc_url && (
-          <div className="mt-16 p-6 bg-zinc-950 border border-zinc-800 rounded-xl">
-            <p className="text-sm text-zinc-400 mb-3">Read the original document</p>
-            <a
-              href={entry.doc_url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white font-semibold hover:text-zinc-300 transition"
-            >
-              Open in Claude →
-            </a>
-          </div>
-        )}
-
         {/* GALLERY (systems with multiple images) */}
         {!isTheory && entry.images?.length > 1 && (
           <div className="grid md:grid-cols-2 gap-6 mt-16">

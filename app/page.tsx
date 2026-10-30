@@ -191,7 +191,7 @@ export default function Home() {
 
           <div className="flex flex-col md:flex-row gap-12 md:gap-20 items-center">
 
-            <div className="flex-shrink-0 flex justify-center">
+            <div className="flex-shrink-0 flex gap-6 justify-center items-center">
               <a
                 href="https://www.credly.com/badges/2dbaa34d-90ca-4b3c-8953-997de57e5b66/public_url"
                 target="_blank"
@@ -200,8 +200,20 @@ export default function Home() {
                 <img
                   src="https://images.credly.com/size/340x340/images/a6387cbd-5ac1-4894-833a-da2cbc28587e/blob"
                   alt="Claude Certified Associate badge, verified on Credly"
-                  className="w-40 h-40 md:w-48 md:h-48"
+                  className="w-36 h-36 md:w-44 md:h-44"
                   style={{ filter: "drop-shadow(0 0 28px rgba(251,191,36,0.4))" }}
+                />
+              </a>
+              <a
+                href="https://www.coursera.org/account/accomplishments/specialization/72U3L14JKRDI"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://grivoblinx.com/google-ai-badge.png"
+                  alt="Google AI Professional Certificate, verified on Coursera"
+                  className="w-36 h-36 md:w-44 md:h-44 object-contain"
+                  style={{ filter: "drop-shadow(0 0 20px rgba(66,133,244,0.3))" }}
                 />
               </a>
             </div>
