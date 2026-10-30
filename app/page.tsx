@@ -73,28 +73,6 @@ export default function Home() {
 
       </section>
 
-      {/* -- PROOF STRIP ------------------------------------------------- */}
-      <section className="bg-zinc-950 border-y border-zinc-800 px-6 py-10">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-0 md:divide-x md:divide-zinc-800">
-
-            {[
-              { stat: "18+", label: "Years in practice" },
-              { stat: "150+", label: "Retail fit-outs delivered" },
-              { stat: "2 hrs - 15 min", label: "Drawing issue time" },
-              { stat: "~1 hr - minutes", label: "Fee proposals prepared" },
-              { stat: "Same day", label: "Concept visuals (was 3-5 days)" },
-            ].map((item) => (
-              <div key={item.stat} className="text-center md:px-6">
-                <p className="text-2xl font-bold text-white mb-1">{item.stat}</p>
-                <p className="text-xs text-zinc-500 leading-snug">{item.label}</p>
-              </div>
-            ))}
-
-          </div>
-        </div>
-      </section>
-
       {/* -- HOW I LEAD AI IN PRACTICE ----------------------------------- */}
       <section id="ai-leadership" className="px-6 py-24 max-w-6xl mx-auto">
 
@@ -257,11 +235,22 @@ export default function Home() {
                   </a>
                 </div>
 
+                <div>
+                  <p className="text-zinc-400 text-sm mb-1">Coursera-verified</p>
+                  <a
+                    href="https://www.coursera.org/account/accomplishments/specialization/72U3L14JKRDI"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-2xl md:text-3xl font-bold text-blue-400 hover:text-blue-300 transition leading-tight"
+                  >
+                    Google AI Professional Certificate.
+                  </a>
+                </div>
+
               </div>
 
               <p className="text-zinc-500 text-sm mt-8">
-                Proctored exam, Pearson VUE. Verified on Credly. Works across Claude,
-                Microsoft Copilot and the broader AI ecosystem - not committed to a single platform.
+                Anthropic: proctored exam, Pearson VUE, verified on Credly. Google: AI Professional Certificate, verified on Coursera. Accreditation is cross-platform by design.
               </p>
             </div>
 
