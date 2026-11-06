@@ -51,45 +51,28 @@ export default function Home() {
               Anthropic Claude Certified Associate.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <a
-                href="/George_Billam_CV.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-white text-black font-semibold px-8 py-3 rounded-full hover:bg-zinc-200 transition text-sm tracking-wide"
-              >
-                Download CV
-              </a>
-              <a
-                href="#contact"
-                className="inline-block border border-zinc-500 text-white font-semibold px-8 py-3 rounded-full hover:border-white transition text-sm tracking-wide"
-              >
-                Get in touch
-              </a>
-            </div>
-
             {/* BADGES */}
-            <div className="flex gap-6 justify-center items-center flex-wrap">
+            <div className="flex gap-8 justify-center items-center flex-wrap mt-10">
               <a href="https://www.credly.com/badges/2dbaa34d-90ca-4b3c-8953-997de57e5b66/public_url" target="_blank" rel="noopener noreferrer">
                 <img
                   src="https://images.credly.com/size/340x340/images/a6387cbd-5ac1-4894-833a-da2cbc28587e/blob"
                   alt="Claude Certified Associate"
-                  className="w-16 h-16 md:w-20 md:h-20 opacity-90 hover:opacity-100 transition"
-                  style={{ filter: "drop-shadow(0 0 12px rgba(251,191,36,0.5))" }}
+                  className="w-20 h-20 md:w-28 md:h-28 opacity-90 hover:opacity-100 transition"
+                  style={{ filter: "drop-shadow(0 0 16px rgba(251,191,36,0.5))" }}
                 />
               </a>
               <img
                 src="https://grivoblinx.com/aws-ai-practitioner-badge.png"
                 alt="AWS Certified AI Practitioner"
-                className="w-16 h-16 md:w-20 md:h-20 object-contain opacity-90"
-                style={{ filter: "drop-shadow(0 0 12px rgba(255,153,0,0.4))" }}
+                className="w-20 h-20 md:w-28 md:h-28 object-contain opacity-90"
+                style={{ filter: "drop-shadow(0 0 16px rgba(255,153,0,0.4))" }}
               />
               <a href="https://www.coursera.org/account/accomplishments/specialization/72U3L14JKRDI" target="_blank" rel="noopener noreferrer">
                 <img
                   src="https://grivoblinx.com/google-ai-badge.png"
                   alt="Google AI Professional Certificate"
-                  className="w-16 h-16 md:w-20 md:h-20 object-contain opacity-90 hover:opacity-100 transition"
-                  style={{ filter: "drop-shadow(0 0 12px rgba(66,133,244,0.4))" }}
+                  className="w-20 h-20 md:w-28 md:h-28 object-contain opacity-90 hover:opacity-100 transition"
+                  style={{ filter: "drop-shadow(0 0 16px rgba(66,133,244,0.4))" }}
                 />
               </a>
             </div>
