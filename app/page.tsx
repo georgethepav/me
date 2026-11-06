@@ -51,7 +51,7 @@ export default function Home() {
               Anthropic Claude Certified Associate.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <a
                 href="/George_Billam_CV.pdf"
                 target="_blank"
@@ -65,6 +65,32 @@ export default function Home() {
                 className="inline-block border border-zinc-500 text-white font-semibold px-8 py-3 rounded-full hover:border-white transition text-sm tracking-wide"
               >
                 Get in touch
+              </a>
+            </div>
+
+            {/* BADGES */}
+            <div className="flex gap-6 justify-center items-center flex-wrap">
+              <a href="https://www.credly.com/badges/2dbaa34d-90ca-4b3c-8953-997de57e5b66/public_url" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="https://images.credly.com/size/340x340/images/a6387cbd-5ac1-4894-833a-da2cbc28587e/blob"
+                  alt="Claude Certified Associate"
+                  className="w-16 h-16 md:w-20 md:h-20 opacity-90 hover:opacity-100 transition"
+                  style={{ filter: "drop-shadow(0 0 12px rgba(251,191,36,0.5))" }}
+                />
+              </a>
+              <img
+                src="https://grivoblinx.com/aws-ai-practitioner-badge.png"
+                alt="AWS Certified AI Practitioner"
+                className="w-16 h-16 md:w-20 md:h-20 object-contain opacity-90"
+                style={{ filter: "drop-shadow(0 0 12px rgba(255,153,0,0.4))" }}
+              />
+              <a href="https://www.coursera.org/account/accomplishments/specialization/72U3L14JKRDI" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="https://grivoblinx.com/google-ai-badge.png"
+                  alt="Google AI Professional Certificate"
+                  className="w-16 h-16 md:w-20 md:h-20 object-contain opacity-90 hover:opacity-100 transition"
+                  style={{ filter: "drop-shadow(0 0 12px rgba(66,133,244,0.4))" }}
+                />
               </a>
             </div>
 
@@ -191,7 +217,7 @@ export default function Home() {
 
           <div className="flex flex-col md:flex-row gap-12 md:gap-20 items-center">
 
-            <div className="flex-shrink-0 flex gap-6 justify-center items-center">
+            <div className="flex-shrink-0 flex flex-wrap gap-6 justify-center items-center">
               <a
                 href="https://www.credly.com/badges/2dbaa34d-90ca-4b3c-8953-997de57e5b66/public_url"
                 target="_blank"
@@ -200,10 +226,16 @@ export default function Home() {
                 <img
                   src="https://images.credly.com/size/340x340/images/a6387cbd-5ac1-4894-833a-da2cbc28587e/blob"
                   alt="Claude Certified Associate badge, verified on Credly"
-                  className="w-36 h-36 md:w-44 md:h-44"
-                  style={{ filter: "drop-shadow(0 0 28px rgba(251,191,36,0.4))" }}
+                  className="w-32 h-32 md:w-36 md:h-36"
+                  style={{ filter: "drop-shadow(0 0 24px rgba(251,191,36,0.4))" }}
                 />
               </a>
+              <img
+                src="https://grivoblinx.com/aws-ai-practitioner-badge.png"
+                alt="AWS Certified AI Practitioner badge"
+                className="w-32 h-32 md:w-36 md:h-36 object-contain"
+                style={{ filter: "drop-shadow(0 0 20px rgba(255,153,0,0.3))" }}
+              />
               <a
                 href="https://www.coursera.org/account/accomplishments/specialization/72U3L14JKRDI"
                 target="_blank"
@@ -212,7 +244,7 @@ export default function Home() {
                 <img
                   src="https://grivoblinx.com/google-ai-badge.png"
                   alt="Google AI Professional Certificate, verified on Coursera"
-                  className="w-36 h-36 md:w-44 md:h-44 object-contain"
+                  className="w-32 h-32 md:w-36 md:h-36 object-contain"
                   style={{ filter: "drop-shadow(0 0 20px rgba(66,133,244,0.3))" }}
                 />
               </a>
@@ -248,6 +280,13 @@ export default function Home() {
                 </div>
 
                 <div>
+                  <p className="text-zinc-400 text-sm mb-1">Amazon Web Services proctored exam</p>
+                  <p className="text-2xl md:text-3xl font-bold text-orange-400 leading-tight">
+                    AWS Certified AI Practitioner.
+                  </p>
+                </div>
+
+                <div>
                   <p className="text-zinc-400 text-sm mb-1">Coursera-verified</p>
                   <a
                     href="https://www.coursera.org/account/accomplishments/specialization/72U3L14JKRDI"
@@ -262,7 +301,7 @@ export default function Home() {
               </div>
 
               <p className="text-zinc-500 text-sm mt-8">
-                Anthropic: proctored exam, Pearson VUE, verified on Credly. Google: AI Professional Certificate, verified on Coursera. Accreditation is cross-platform by design.
+                Anthropic: proctored exam, Pearson VUE, verified on Credly. AWS: proctored exam, verified by Amazon Web Services. Google: AI Professional Certificate, verified on Coursera. Accreditation is cross-platform by design.
               </p>
             </div>
 
