@@ -61,12 +61,14 @@ export default function Home() {
                   style={{ filter: "drop-shadow(0 0 16px rgba(251,191,36,0.5))" }}
                 />
               </a>
-              <img
-                src="https://grivoblinx.com/aws-ai-practitioner-badge.png"
-                alt="AWS Certified AI Practitioner"
-                className="w-20 h-20 md:w-28 md:h-28 object-contain opacity-90"
-                style={{ filter: "drop-shadow(0 0 16px rgba(255,153,0,0.4))" }}
-              />
+              <a href="https://www.credly.com/badges/a4941cc8-7cd5-4c79-a2bb-5a785a5f5ec6/public_url" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="https://images.credly.com/size/340x340/images/4d4693bb-530e-4bca-9327-de07f3aa2348/image.png"
+                  alt="AWS Certified AI Practitioner"
+                  className="w-20 h-20 md:w-28 md:h-28 object-contain opacity-90 hover:opacity-100 transition"
+                  style={{ filter: "drop-shadow(0 0 16px rgba(255,153,0,0.4))" }}
+                />
+              </a>
               <a href="https://www.coursera.org/account/accomplishments/specialization/72U3L14JKRDI" target="_blank" rel="noopener noreferrer">
                 <img
                   src="https://grivoblinx.com/google-ai-badge.png"
@@ -213,12 +215,14 @@ export default function Home() {
                   style={{ filter: "drop-shadow(0 0 24px rgba(251,191,36,0.4))" }}
                 />
               </a>
-              <img
-                src="https://grivoblinx.com/aws-ai-practitioner-badge.png"
-                alt="AWS Certified AI Practitioner badge"
-                className="w-32 h-32 md:w-36 md:h-36 object-contain"
-                style={{ filter: "drop-shadow(0 0 20px rgba(255,153,0,0.3))" }}
-              />
+              <a href="https://www.credly.com/badges/a4941cc8-7cd5-4c79-a2bb-5a785a5f5ec6/public_url" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="https://images.credly.com/size/340x340/images/4d4693bb-530e-4bca-9327-de07f3aa2348/image.png"
+                  alt="AWS Certified AI Practitioner badge"
+                  className="w-32 h-32 md:w-36 md:h-36 object-contain hover:opacity-90 transition"
+                  style={{ filter: "drop-shadow(0 0 20px rgba(255,153,0,0.3))" }}
+                />
+              </a>
               <a
                 href="https://www.coursera.org/account/accomplishments/specialization/72U3L14JKRDI"
                 target="_blank"
@@ -264,9 +268,14 @@ export default function Home() {
 
                 <div>
                   <p className="text-zinc-400 text-sm mb-1">Amazon Web Services proctored exam</p>
-                  <p className="text-2xl md:text-3xl font-bold text-orange-400 leading-tight">
+                  <a
+                    href="https://www.credly.com/badges/a4941cc8-7cd5-4c79-a2bb-5a785a5f5ec6/public_url"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-2xl md:text-3xl font-bold text-orange-400 hover:text-orange-300 transition leading-tight"
+                  >
                     AWS Certified AI Practitioner.
-                  </p>
+                  </a>
                 </div>
 
                 <div>
