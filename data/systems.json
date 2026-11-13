@@ -43,8 +43,7 @@
       " landlord presentations"
     ],
     "images": [
-      "/sketchup-airport-concourse.png",
-      "/enscape-airport-concourse.png"
+      "/card-sketchup-enscape.jpg"
     ],
     "content": [
       "There is a particular moment in retail design where a concept needs to become visible before it is fully designed. A leasing team wants to show a potential brand what a unit could look like. A landlord wants to see whether a proposed tenant fits the centre vision. A client wants to stress-test a layout before committing to a detailed design programme. In all three cases, the request is the same: show me something. Show me something now.",
@@ -133,7 +132,7 @@
       "BrookerFlynn Architects"
     ],
     "images": [
-      "/daily-control-diagram.png"
+      "/card-daily-control.jpg"
     ],
     "content": [
       "This piece follows on from an earlier one about building a custom fee proposal tool for the practice. That one was about the tool. This one is about what happened when I stopped driving the tool by hand and built something to drive it for me.",
@@ -274,7 +273,9 @@
       "BIM",
       "architecture"
     ],
-    "images": [],
+    "images": [
+      "/card-bregs-agent.jpg"
+    ],
     "content": [
       "Building Regulations queries arrive constantly on live projects. The question is always the same: does this design decision comply, and where is that set out? Looking it up manually is reliable but slow. This agent makes it fast without removing the human judgement.",
       "The agent is mounted inside Revit via MCP and has direct access to Approved Documents A to T. When a query arrives, it selects the relevant document, locates the applicable clause, and returns an annotated note that can be attached to the model or the drawing register.",
@@ -295,7 +296,9 @@
       "Microsoft Graph API",
       "drafts-only"
     ],
-    "images": [],
+    "images": [
+      "/card-finance-agent.jpg"
+    ],
     "content": [
       "Purchase order management in a small practice is time-consuming and error-prone. POs arrive by email, get forwarded, get chased, and occasionally get missed. The gap between fees agreed and POs received is a real financial risk.",
       "The finance agent sweeps incoming PO emails, extracts the relevant data, and cross-references each one against the live fee register. Unmatched items are flagged. Where a PO is overdue, the agent drafts a chase email on the existing thread, in the practice voice, ready to review and send.",
@@ -317,7 +320,9 @@
       "retail design",
       "CAD"
     ],
-    "images": [],
+    "images": [
+      "/card-furniture-agent.jpg"
+    ],
     "content": [
       "Retail clients supply furniture layouts as DWG files. Translating those into a Revit model with the correct families placed at the correct positions is painstaking work. On a large airport store layout that can take most of a day.",
       "The furniture mapping agent reads the client DWG, identifies each piece of furniture by its category and reference code, selects the matching Revit family from the practice library, and places or updates it in the model at the correct position.",
@@ -339,7 +344,9 @@
       "open source",
       "AI agent"
     ],
-    "images": [],
+    "images": [
+      "/card-revit-mcp.jpg"
+    ],
     "content": [
       "The Revit MCP server exposes Revit's API to AI agents via the Model Context Protocol. The open-source base gives Claude direct access to model data, view information and element parameters. What it does not give you out of the box is a reliable, governed way to run it on live projects.",
       "This implementation extends the base server with a standard mount protocol that the agent follows at the start of every session: load the project context, verify the open model, check for warnings, and initialise the session ledger. The ledger records every MCP call made during the session so there is always an audit trail.",
