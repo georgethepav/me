@@ -412,8 +412,9 @@ document.querySelectorAll('.vhero video,.card-thumb video').forEach(function(vid
   card.addEventListener('mouseleave',function(){vid.pause();vid.currentTime=0;});
 });
 
+history.scrollRestoration='manual';
 var hash=location.hash.replace('#','');
-if(hash&&VIDEOS[hash]) goDetail(hash);
+if(hash&&VIDEOS[hash]){goDetail(hash);}else{window.scrollTo(0,0);}
 </script>
 </body>
 </html>
