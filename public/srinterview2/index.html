@@ -257,9 +257,24 @@ nav{
   <div class="grid-label">More work</div>
   <div class="cards">
 
-    <div class="card" onclick="goDetail('vellum-3d-plan')">
+    <div class="card" onclick="goDetail('fee-proposal')">
       <div class="card-hdr">
         <span class="card-num">01</span>
+        <svg class="card-dot" viewBox="0 0 14 14"><rect width="14" height="14" fill="#e60c80"/></svg>
+      </div>
+      <div class="card-thumb">
+        <video src="/srinterview/media/fee.mp4" muted loop playsinline preload="metadata"></video>
+        <div class="play-ring"><svg width="13" height="13" viewBox="0 0 20 20" fill="white"><polygon points="6,3 17,10 6,17"/></svg></div>
+      </div>
+      <div class="card-foot">
+        <h4>Fee Proposal Tool</h4>
+        <p>Intake form to staged fee, PDF proposal and covering email</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="goDetail('vellum-3d-plan')">
+      <div class="card-hdr">
+        <span class="card-num">02</span>
         <svg class="card-dot" viewBox="0 0 14 14"><rect width="14" height="14" fill="#4f46e5"/></svg>
       </div>
       <div class="card-thumb">
@@ -274,7 +289,7 @@ nav{
 
     <div class="card" onclick="goDetail('bfa-daily-control')">
       <div class="card-hdr">
-        <span class="card-num">02</span>
+        <span class="card-num">03</span>
         <svg class="card-dot" viewBox="0 0 14 14"><rect width="14" height="14" fill="#111"/></svg>
       </div>
       <div class="card-thumb">
@@ -289,7 +304,7 @@ nav{
 
     <div class="card" onclick="goDetail('building-regs-agent')">
       <div class="card-hdr">
-        <span class="card-num">03</span>
+        <span class="card-num">04</span>
         <svg class="card-dot" viewBox="0 0 14 14"><rect width="14" height="14" fill="#ec4899"/></svg>
       </div>
       <div class="card-thumb">
@@ -304,7 +319,7 @@ nav{
 
     <div class="card" onclick="goDetail('layout-studio')">
       <div class="card-hdr">
-        <span class="card-num">04</span>
+        <span class="card-num">05</span>
         <svg class="card-dot" viewBox="0 0 14 14"><rect width="14" height="14" fill="#f59e0b"/></svg>
       </div>
       <div class="card-thumb">
@@ -319,7 +334,7 @@ nav{
 
     <div class="card" onclick="goDetail('leading-ai-adoption')">
       <div class="card-hdr">
-        <span class="card-num">05</span>
+        <span class="card-num">06</span>
         <svg class="card-dot" viewBox="0 0 14 14"><rect width="14" height="14" fill="#7c3aed"/></svg>
       </div>
       <div class="card-thumb">
@@ -366,6 +381,7 @@ nav{
 var VIDEOS = {
   'vellum-revit-cgi':{title:'Vellum: Revit View to CGI',label:'Featured · AI Visualisation',desc:'Generating photorealistic CGI directly from a Revit 3D view using a bespoke AI pipeline — from model to finished visual without manually exporting or leaving the BIM environment. The same workflow that produced client-ready visuals for live retail projects.',file:'vellum-revit-cgi.mp4'},
   'bfa-clerical':{title:'BFA Clerical — How It Works',label:'Featured · AI Agent',desc:'A walkthrough of the BFA Clerical agent: how it triages the inbox, reads meeting notes, identifies actions by person, and drafts replies — all from a single morning run. Built on Claude via the Anthropic API.',file:'bfa-clerical.mp4'},
+  'fee-proposal':{title:'Fee Proposal and Intake Tool',label:'AI Tool',desc:'An intake form becomes a staged fee and a proposal. Turns a project intake form into a fee split by RIBA stage, produces a PDF proposal from the practice template, and drafts the covering email. The associate reviews fee, scope and wording before it leaves the practice.',file:'/srinterview/media/fee.mp4',external:true},
   'vellum-3d-plan':{title:'Vellum: 3D View and Plan Walkthrough',label:'AI Visualisation',desc:'A walkthrough of the Vellum pipeline applied to a 3D view and plan — showing how the same workflow handles different output types from the same Revit model.',file:'vellum-3d-plan.mp4',noBranding:true},
   'bfa-daily-control':{title:'BFA Daily Control: Inbox Triage Agent',label:'AI Agent',desc:'The Daily Control agent in action — sweeping Outlook and Teams, surfacing what needs a reply, and producing structured draft responses ready to review. Runs each morning in around two minutes.',file:'bfa-daily-control.mp4'},
   'building-regs-agent':{title:'Building Regs Agent: Library Answers',label:'AI Agent',desc:'The Building Regulations Notes agent answering queries from the BFA Approved Documents library, producing structured annotated notes referenced to the relevant AD section.',file:'building-regs-agent.mp4'},
@@ -375,7 +391,7 @@ var VIDEOS = {
 
 function goDetail(slug){
   var v=VIDEOS[slug]; if(!v) return;
-  document.getElementById('detail-video').src='/srinterview2/media/'+v.file;
+  document.getElementById('detail-video').src=v.external?v.file:'/srinterview2/media/'+v.file;
   document.getElementById('detail-video').play();
   document.getElementById('detail-title').textContent=v.title;
   document.getElementById('detail-label').textContent=v.label;
